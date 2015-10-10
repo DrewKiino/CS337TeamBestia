@@ -1,1 +1,6 @@
-# Sails 0.11 with Mongoose blueprints and ES6
+
+# CS337 Team Bestia
+## Project Documentation
+### Frameworks
+####Server-Side
+
