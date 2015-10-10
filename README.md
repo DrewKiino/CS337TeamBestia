@@ -2,7 +2,7 @@
 # CS337 Team Bestia
 ## Project Documentation
 ### Overview
-We all agreed to create a Music web app store.
+Our idea is to create a Music web app store.
 #### Frameworks
 * [MongoDB](https://www.mongodb.org/)
 * [Sails.js](http://sailsjs.org/)
