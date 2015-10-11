@@ -32,7 +32,7 @@ Our idea is to create a Music web app store.
 1. setup developer environment for team using the above listed frameworks
 2. downloaded and started server using boiletplate [code](https://github.com/austinmao/sails-mongoose-boilerplate)
 3. wireframe Angular.js
-
+4. added new branch for integrating registration
 
 
 
