@@ -4,9 +4,7 @@
  * @description :: Server-side logic for managing Tracks
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
-import mongoose from 'mongoose'
-
+ 
 export function upload(req, res) {
 
   req.file('track').upload({
