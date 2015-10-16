@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing Tracks
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
- 
+
 export function upload(req, res) {
 
   req.file('track').upload({
@@ -32,4 +32,8 @@ export function upload(req, res) {
   } = req.body
 
   res.json({})
+}
+export function logTrackname(req, res){
+  sails.log.debug(req.body)
+  res.json({});
 }
