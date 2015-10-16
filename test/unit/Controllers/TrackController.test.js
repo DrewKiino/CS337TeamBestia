@@ -38,14 +38,5 @@ describe.only('Track Controller', () => {
       })
       .catch(done)
     })
-
-    it('app available', () => {
-      app.should.exist
-      app.should.equal(global.app)
-    })
-
-    it('global models available', () => {
-      // User.should.exist
-    })
   })
 })
