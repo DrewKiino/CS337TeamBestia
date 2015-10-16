@@ -8,8 +8,10 @@
 <div ng-app='Bestia'>
   <div ng-controller='HomeController'>
     <input ng-model='track'>
-    <button ng-click='sendTrackname()'></button>
+    <button ng-click='sendTrackname()'>submit</button>
     {{response}}
+    <input ng-model='file' type='file'>
+    <button ng-click='upload()'>upload</button>
   </div>
 </div>
 
@@ -21,33 +23,27 @@
 
   .controller('HomeController', ['$scope', '$http', function($scope, $http){
 
-    $scope.sendTrackname = function() {
+    function success(response) {
+      $scope.response = response.status
+    }
 
-      const postObj = { 
-        "name": $scope.track
-      }
+    function error(response) {
+      $scope.response = response.status
+    }
 
-      function success(response) {
-        $scope.response = response
-      }
-
-      function error(response) {
-        $scope.response = response
-      }
-
-      $http.post('/track/logTrackname', postObj)
+    function post(route, object) {
+      $http.post(route, object)
       .then (success, error)
+    }
 
-      // $http({
-      //   method: 'POST',
-      //   url: '/track/logTrackname'
-      // }).then(function successCallback(response) {
-      // // this callback will be called asynchronously
-      // // when the response is available
-      // }, function errorCallback(response) {
-      // // called asynchronously if an error occurs
-      // // or server returns response with an error status.
-      // });
+    $scope.sendTrackname = function() {
+      const object = { "name": $scope.track }
+      post('/track/logTrackname', object)
+    }
+
+    $scope.upload = function() {
+      const object = { "file": $scope.file }
+      post('/track/upload', object)
     }
 
   }])

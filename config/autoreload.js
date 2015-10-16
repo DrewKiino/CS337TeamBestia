@@ -2,7 +2,7 @@ module.exports.autoreload = {
   active: true,
   usePolling: false,
   dirs: [
-	  "/api/"
+	  "/api/",
     // "api/models",
     // "api/controllers",
     // "api/services"
