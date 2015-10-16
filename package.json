@@ -1,5 +1,5 @@
 {
-  "name": "fomo",
+  "name": "bestia",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -47,7 +47,7 @@
     "kue": "^0.9.3",
     "lodash": "^3.10.0",
     "moment": "^2.10.3",
-    "mongodb": "^2.0.39",
+    "mongodb": "^2.0.46",
     "mongoose": "^4.0.7",
     "natural": "^0.2.1",
     "objectid": "^3.2.1",
@@ -78,9 +78,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/austinmao/fomo.git"
+    "url": "git://github.com/drewkiino/CS337TeamBestia.git"
   },
-  "author": "austinmao",
+  "author": "bestia",
   "license": "",
   "devDependencies": {
     "barrels": "^1.5.0"

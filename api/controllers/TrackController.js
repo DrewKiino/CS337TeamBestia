@@ -7,32 +7,26 @@
 
 export function upload(req, res) {
 
-  req.file('track').upload({
-    adapter: require('skipper-gridfs')
-  }, function(err, uploadedFiles) {
+  sails.log.debug('uploading...')
 
-    // if there is an error, res with the error
-    if (err) return res.negotiate(err)
+  sails.log.debug(req)
 
-    // If no files were uploaded, respond with an error.
-    if (uploadedFiles.length === 0) return res.badRequest('No file was uploaded') 
-
-    sails.log.debug(uploadedFiles)
+  req.file('file').upload(
+  // { 
+  //   adapter: require('skipper-gridfs'), 
+  //   uri: 'http://localhost:1337'
+  // }, 
+  function (err, filesUploaded) {
+    sails.log.error(err)
+    sails.log.info(filesUploaded)
+    // if (err) return res.negotiate(err)
+    // return res.ok()
   })
-
-  const {
-    trackTitle,
-    albumTitle,
-    artist,
-    genre,
-    releaseData,
-    createdAt,
-    updatedAt,
-    file
-  } = req.body
 
   res.json({})
 }
+
+
 export function logTrackname(req, res){
   sails.log.debug(req.body)
   res.json({});
