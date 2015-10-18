@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -291,3 +292,58 @@ https://scotch.io/tutorials/build-a-real-time-polymer-to-do-app
 >>>>>>> created home page with multiple pages
 </html>
 >>>>>>> added paper-menu styling
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, World!</title>
+</head>
+<body>
+<p>GoodBye World!</p>
+<div ng-app='Bestia'>
+  <div ng-controller='HomeController'>
+    <input ng-model='track'>
+    <button ng-click='sendTrackname()'>submit</button>
+    {{response}}
+    <input ng-model='file' type='file'>
+    <button ng-click='upload()'>upload</button>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
+</script>
+<script type="text/javascript">
+  
+  angular.module('Bestia', [])
+
+  .controller('HomeController', ['$scope', '$http', function($scope, $http){
+
+    function success(response) {
+      $scope.response = response.status
+    }
+
+    function error(response) {
+      $scope.response = response.status
+    }
+
+    function post(route, object) {
+      $http.post(route, object)
+      .then (success, error)
+    }
+
+    $scope.sendTrackname = function() {
+      const object = { "name": $scope.track }
+      post('/track/logTrackname', object)
+    }
+
+    $scope.upload = function() {
+      const object = { "file": $scope.file }
+      post('/track/upload', object)
+    }
+
+  }])
+</script>
+</body>
+</html>
+
+>>>>>>> edited index.html
