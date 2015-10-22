@@ -1,4 +1,6 @@
+# playground
 
+<<<<<<< HEAD
 # CS337 Team Bestia
 
 ## Project Documentation
@@ -38,3 +40,6 @@ Our idea is to create a Music web app store.
 
 
 
+=======
+a [Sails](http://sailsjs.org) application
+>>>>>>> migrated to polymer

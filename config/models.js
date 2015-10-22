@@ -6,7 +6,7 @@
  * in each of your models.
  *
  * For more info on Sails models, see:
- * http://sailsjs.org/#/documentation/concepts/ORM
+ * http://sailsjs.org/#!/documentation/concepts/ORM
  */
 
 module.exports.models = {
@@ -17,6 +17,7 @@ module.exports.models = {
   * connections (see `config/connections.js`)                                *
   *                                                                          *
   ***************************************************************************/
+  // connection: 'localDiskDb',
   connection: 'mongo',
 
   /***************************************************************************
@@ -24,10 +25,11 @@ module.exports.models = {
   * How and whether Sails will attempt to automatically rebuild the          *
   * tables/collections/etc. in your schema.                                  *
   *                                                                          *
-  * See http://sailsjs.org/#/documentation/concepts/ORM/model-settings.html  *
+  * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  migrate: 'alter',
+
+  migrate: 'drop',
 
   /**
    * A flag to toggle schemaless or schema mode in databases that support
@@ -37,5 +39,4 @@ module.exports.models = {
    * @type {Boolean}
    */
   schema: false // note: using mongoose to validate schemas
-
 };

@@ -7,7 +7,7 @@
  *
  *
  * For more informationom i18n in Sails, check out:
- * http://sailsjs.org/#/documentation/concepts/Internationalization
+ * http://sailsjs.org/#!/documentation/concepts/Internationalization
  *
  * For a complete list of i18n options, see:
  * https://github.com/mashpie/i18n-node#list-of-configuration-options
@@ -23,8 +23,7 @@ module.exports.i18n = {
   *                                                                          *
   ***************************************************************************/
 
-  // locales: ['en', 'es', 'fr', 'de']
-  locales: ['en'],
+  // locales: ['en', 'es', 'fr', 'de'],
 
   /****************************************************************************
   *                                                                           *
@@ -35,7 +34,7 @@ module.exports.i18n = {
   *                                                                           *
   ****************************************************************************/
 
-  defaultLocale: 'en',
+  // defaultLocale: 'en',
 
   /****************************************************************************
   *                                                                           *
