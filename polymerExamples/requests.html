@@ -1,0 +1,54 @@
+<script src="/browserify/imports.js">
+</script>
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js">
+</script>
+<link rel='import' 
+      href="/bower_components/polymer/polymer.html">
+<link rel='import' 
+      href="/bower_components/iron-input/iron-input.html">
+<link rel="import" 
+      href="/bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id='content-el'>
+  <style>
+  </style>
+  <template>
+    Hello, World!
+    <iron-ajax id="ajax" on-response="response"></iron-ajax>
+    <button on-click='request'>Click Me</button>
+  </template>
+  <script>
+    Polymer({
+      is: 'content-el',
+      request: function() {
+        var ajax = this.$.ajax
+        ajax.method = 'POST'
+        ajax.contentType = 'application/json'
+        ajax.body = { Client: 'hello'}
+        ajax.url = '/user/test'
+        ajax.handleAs = 'json'
+        ajax.generateRequest()
+      },
+      response: function(e) {
+        console.log(e.detail.response)
+      }
+    })
+  </script>
+</dom-module>
+
+<!--
+https://scotch.io/tutorials/build-a-real-time-polymer-to-do-app
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body fullbreed unresolved>
+    <content-el></content-el>
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js'></script>
+
+<dom-module id='dropzone-element'>
+
+  <style>
+    div#myDropzone {
+      max-width: 200;
+      border: 1px dashed black;
+    }
+  </style>
+
+  <template>
+    <div>{{response}}</div>
+    <button on-click='processQueue'>Upload</button>
+    <div id='myDropzone'>Drop files here to upload</div>
+    <script src='/elements/dropzone/dropzone-config.js'></script>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'dropzone-element',
+      ready: function() {
+        // dropzone wont be able to init here
+        // once this starts but can be referenced in other 
+        // functions after
+      },
+      processQueue: function() {
+        console.log('uploading...')
+        dropzone.processQueue()
+      },
+      addedFile: function(file) {
+
+      },
+      sending: function(file, xhr, formData) {
+
+      },
+      success: function(file, response) {
+        console.log(response)
+        polymer.set('response', response)
+      },
+      uploadProgress: function(error, progress, bytesSent) {
+
+      },
+      complete: function(error, success) {
+
+      },
+      properties: {
+        response: {
+          type: String,
+          value: ''
+        },
+      }
+    })
+  </script>
+</dom-module>

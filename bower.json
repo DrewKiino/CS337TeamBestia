@@ -1,0 +1,30 @@
+{
+  "name": "playground",
+  "description": "a web app to play with",
+  "main": "app.js",
+  "authors": [
+    "DrewKiino"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "iron-elements": "polymerelements/iron-elements#master",
+    "paper-elements": "polymerelements/paper-elements#master",
+    "pubnub-element": "~4.0.1"
+  },
+  "resolutions": {
+    "core-iconset-svg": "master",
+    "core-icon-button": "master",
+    "core-meta": "master"
+  }
+}

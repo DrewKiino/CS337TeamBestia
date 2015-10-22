@@ -14,6 +14,18 @@
 
 module.exports = function(grunt) {
 
+	/**
+	 * MARK: figure out how to work this...
+	 */
+	grunt.initConfig({
+	  vulcanize: {
+	    default: {
+	      options: {},
+	      files: {
+	      },
+	    },
+	  },
+	})
 
 	// Load the include-all library in order to require all of our grunt
 	// configurations and task registrations dynamically.

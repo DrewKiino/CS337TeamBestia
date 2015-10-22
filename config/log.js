@@ -7,7 +7,7 @@
  * allows for some pretty neat custom transports/adapters for log messages)
  *
  * For more information on the Sails logger, check out:
- * http://sailsjs.org/#/documentation/concepts/Logging
+ * http://sailsjs.org/#!/documentation/concepts/Logging
  */
 
 module.exports.log = {
@@ -24,9 +24,7 @@ module.exports.log = {
   *                                                                          *
   ***************************************************************************/
 
-  // level: process.env.LOG_LEVEL || 'debug'
-  level: process.env.LOG_LEVEL || 'info'
-  // maxSize: 1000,
-  // filePath: ''
+  // level: 'info'
+
 
 };
