@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -470,8 +471,16 @@ https://scotch.io/tutorials/build-a-real-time-polymer-to-do-app
 <body>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> added paper-menu styling
 <!DOCTYPE html>
 <html>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en">
+>>>>>>> added paper-menu styling
 <head>
   <meta charset="UTF-8" />
   <title>Hello, World!</title>
@@ -762,5 +771,125 @@ https://scotch.io/tutorials/build-a-real-time-polymer-to-do-app
 >>>>>>> probably broke this branch
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+>>>>>>> added paper-menu styling
 
+  <title>CS337 Team Bestia</title>
+
+<<<<<<< HEAD
+=======
+  <script src='bower_components/webcomponentsjs/webcomponents-lite.js'></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="bower_components/paper-item/paper-item.html">
+  <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+  <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+  <link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+  <link rel="import" href="bower_components/paper-styles/demo-pages.html">
+
+  <style is="custom-style">
+    .horizontal-section {
+      padding: 0 !important;
+    }
+
+    .avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+    }
+
+<<<<<<< HEAD
 >>>>>>> edited index.html
+=======
+    paper-item {
+      --paper-item: {
+        cursor: pointer;
+      };
+    }
+
+    .sublist {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+<body unresolved>
+  <div class="horizontal-section-container">
+    <div>
+      <h4>Standard</h4>
+      <div class="horizontal-section">
+        <paper-menu>
+          <paper-item>Inbox</paper-item>
+          <paper-item>Starred</paper-item>
+          <paper-item>Sent mail</paper-item>
+          <paper-item>Drafts</paper-item>
+        </paper-menu>
+      </div>
+    </div>
+
+    <div>
+      <h4>Pre-selected</h4>
+      <div class="horizontal-section">
+        <paper-menu selected="0">
+          <paper-item>Inbox</paper-item>
+          <paper-item disabled>Starred</paper-item>
+          <paper-item>Sent mail</paper-item>
+          <paper-item>Drafts</paper-item>
+        </paper-menu>
+      </div>
+    </div>
+
+    <div>
+      <h4>Multi-select</h4>
+      <div class="horizontal-section">
+        <paper-menu multi>
+          <paper-item>Bold</paper-item>
+          <paper-item>Italic</paper-item>
+          <paper-item>Underline</paper-item>
+          <paper-item>Strikethrough</paper-item>
+        </paper-menu>
+      </div>
+    </div>
+
+    <div>
+      <h4>Sub-menu</h4>
+      <div class="horizontal-section">
+        <paper-menu>
+          <paper-submenu>
+            <paper-item class="menu-trigger">Topics</paper-item>
+            <paper-menu class="menu-content sublist">
+              <paper-item>Topic 1</paper-item>
+              <paper-item>Topic 2</paper-item>
+              <paper-item>Topic 3</paper-item>
+            </paper-menu>
+          </paper-submenu>
+          <paper-submenu>
+            <paper-item class="menu-trigger">Faves</paper-item>
+            <paper-menu class="menu-content sublist" multi>
+              <paper-item>Fave 1</paper-item>
+              <paper-item>Fave 2</paper-item>
+            </paper-menu>
+          </paper-submenu>
+          <paper-submenu disabled>
+            <paper-item class="menu-trigger">Unavailable</paper-item>
+            <paper-menu class="menu-content sublist" multi>
+              <paper-item>Unavailable 1</paper-item>
+              <paper-item>Unavailable 2</paper-item>
+            </paper-menu>
+          </paper-submenu>
+        </paper-menu>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> added paper-menu styling
+>>>>>>> added paper-menu styling
