@@ -1,13 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>React with ECMAScript 6</title>
-</head>
-<body>
-  <div id="root"></div>
-  <script src="http://localhost:8080/webpack-dev-server.js"></script>
-  <script src="bundle.js"></script>
-</body>
+<script src="/browserify/imports.js"></script>
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel='import' href='elements/dropzone/dropzone-element.html'>
+
+
+<!--
+https://scotch.io/tutorials/build-a-real-time-polymer-to-do-app
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body fullbreed unresolved>
+    <dropzone-element></dropzone-element>
+  </body>
 </html>
+
+
+
+
+
+
+
+
