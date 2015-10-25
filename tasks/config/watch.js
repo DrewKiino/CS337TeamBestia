@@ -24,8 +24,12 @@ module.exports = function(grunt) {
 
 			// Assets to watch:
 			files: [
+<<<<<<< HEAD
 				'assets/**/*',
 				'tasks/pipeline.js',
+=======
+				'assets/**/*', 'tasks/pipeline.js',
+>>>>>>> added paper-menu styling
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
