@@ -13,7 +13,11 @@
  * always omit, customize, or replace this behavior with SASS, SCSS,
  * or any other Grunt tasks you like.)
  */
-h1 {
-  color: red; }
 
-/*# sourceMappingURL=importer.css.map */
+// For example:
+//
+// @import 'foundation.scss';
+//
+// etc.
+
+@import 'index.scss'
