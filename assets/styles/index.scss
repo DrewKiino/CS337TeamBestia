@@ -2,22 +2,34 @@
 $shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14),
           0 1px 5px 0 rgba(0, 0, 0, 0.12),
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
+$grey30:  #fafafa;
+$grey700: #616161;
+
 
 body {
   font-family: 'Roboto', 'Noto', sans-serif;
   font-size: 14px;
   margin: 0;
   padding: 24px;
-  background-color: #fafafa;
+  background-color: $grey30;
+}
+
+code {
+  color: $grey700;
 }
 
 .horizontal-section-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  flex-direction: row;
 
-.vertical-section-container {
+  .menu {
+    min-width: 128px;
+  }
+
+  .songs {
+    margin: auto;
+    min-width: 800px;
+  }
 }
 
 .horizontal-section {
@@ -31,32 +43,13 @@ body {
   box-shadow: $shadow;
 }
 
-.avatar {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #ccc;
-}
-
-paper-item {
-  --paper-item: {
-    cursor: pointer;
-  };
-}
-
 .sublist {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .centered {
-  max-width: 400px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-}
-
-code {
-  color: #616161
 }
