@@ -13,6 +13,7 @@
  * always omit, customize, or replace this behavior with SASS, SCSS,
  * or any other Grunt tasks you like.)
  */
+<<<<<<< HEAD
 body {
   font-family: 'Roboto', 'Noto', sans-serif;
   font-size: 14px;
@@ -50,5 +51,9 @@ code {
     text-align: center; }
   .body-container .login-page {
     text-align: center; }
+=======
+h1 {
+  color: red; }
+>>>>>>> integrated working sass
 
 /*# sourceMappingURL=importer.css.map */
