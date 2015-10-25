@@ -14,6 +14,7 @@
  * or any other Grunt tasks you like.)
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 body {
   font-family: 'Roboto', 'Noto', sans-serif;
   font-size: 14px;
@@ -135,5 +136,9 @@ h1 {
 =======
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
+=======
+h1 {
+  color: red; }
+>>>>>>> integrated working sass
 
 /*# sourceMappingURL=importer.css.map */
