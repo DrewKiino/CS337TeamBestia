@@ -34,6 +34,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> added paper-menu styling
 =======
@@ -41,7 +42,13 @@ module.exports = function(grunt) {
 =======
 >>>>>>> added paper-menu styling
 =======
+>>>>>>> added paper-menu styling
+=======
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> added paper-menu styling
+>>>>>>> added paper-menu styling
 				'assets/**/*',
 				'tasks/pipeline.js',
 =======
@@ -51,6 +58,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> installed sass compiler
 =======
@@ -64,6 +72,13 @@ module.exports = function(grunt) {
 >>>>>>> added paper-menu styling
 =======
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> installed sass compiler
+=======
+>>>>>>> added paper-menu styling
+=======
+>>>>>>> added paper-menu styling
 				'assets/**/*',
 				'tasks/pipeline.js',
 >>>>>>> installed sass compiler
@@ -74,6 +89,7 @@ module.exports = function(grunt) {
 =======
 >>>>>>> installed sass compiler
 =======
+<<<<<<< HEAD
 				'assets/**/*', 'tasks/pipeline.js',
 >>>>>>> added paper-menu styling
 <<<<<<< HEAD
@@ -97,6 +113,11 @@ module.exports = function(grunt) {
 =======
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> added paper-menu styling
+>>>>>>> added paper-menu styling
+>>>>>>> added paper-menu styling
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
