@@ -26,15 +26,21 @@ module.exports = function(grunt) {
 			files: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> added paper-menu styling
 				'assets/**/*',
 				'tasks/pipeline.js',
 =======
 				'assets/**/*', 'tasks/pipeline.js',
 >>>>>>> added paper-menu styling
+<<<<<<< HEAD
 =======
 				'assets/**/*',
 				'tasks/pipeline.js',
 >>>>>>> installed sass compiler
+=======
+>>>>>>> added paper-menu styling
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
