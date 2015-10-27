@@ -6,7 +6,7 @@
  * Only applies to HTTP requests (not WebSockets)
  *
  * For more information on configuration, check out:
- * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.http.html
+ * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.http.html
  */
 
 module.exports.http = {
@@ -57,13 +57,7 @@ module.exports.http = {
     // myRequestLogger: function (req, res, next) {
     //     console.log("Requested :: ", req.method, req.url);
     //     return next();
-    // },
-
-    // forceSsl: function (req, res, next) {
-    //   if (req.protocol === 'http') {
-    //     res.redirect('https://' + req.hostname + req.url)
-    //   }
-    // },
+    // }
 
 
   /***************************************************************************

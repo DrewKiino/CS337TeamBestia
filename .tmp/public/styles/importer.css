@@ -1,15 +1,53 @@
 /**
- * importer.less
+ * importer.scss
  *
  * By default, new Sails projects are configured to compile this file
- * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * from SASS to CSS.  Unlike CSS files, SASS files are not compiled and
  * included automatically unless they are imported below.
  *
- * The LESS files imported below are compiled and included in the order
+ * The SASS files imported below are compiled and included in the order
  * they are listed.  Mixins, variables, etc. should be imported first
- * so that they can be accessed by subsequent LESS stylesheets.
+ * so that they can be accessed by subsequent SASS stylesheets.
  *
  * (Just like the rest of the asset pipeline bundled in Sails, you can
  * always omit, customize, or replace this behavior with SASS, SCSS,
  * or any other Grunt tasks you like.)
  */
+body {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 24px;
+  background-color: #fafafa; }
+
+code {
+  color: #616161; }
+
+.horizontal-section-container {
+  display: flex;
+  flex-direction: row; }
+  .horizontal-section-container .menu {
+    min-width: 128px; }
+  .horizontal-section-container .songs {
+    margin: auto;
+    min-width: 800px; }
+
+.horizontal-section {
+  padding: 0 !important;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.vertical-section {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.sublist {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.centered {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=importer.css.map */

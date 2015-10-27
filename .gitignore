@@ -1,0 +1,11 @@
+# grunt cache
+.grunt
+
+# dependencies
+node_modules
+
+# Tmp files
+.tmp
+
+# Api keys
+.env

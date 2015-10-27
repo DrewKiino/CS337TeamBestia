@@ -1,11 +1,10 @@
-/**
- * UserController
- *
- * @description :: Server-side logic for managing users
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
- */
 
-module.exports = {
-	
-};
 
+
+
+export function test(req, res) {
+  sails.log.debug(req.body)
+  res.json({
+    Server: "Hi!"
+  })
+}
