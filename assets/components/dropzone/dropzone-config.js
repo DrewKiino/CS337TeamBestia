@@ -15,7 +15,7 @@ var dropzone = new Dropzone("div#myDropzone", {
   uploadMultiple: true, // upload multiple files in one request if set to true
   autoProcessQueue: false, // upload files automatically if set to true
   addRemoveLinks: false,
-  // acceptedFiles:"image/*",
+  acceptedFiles:"image/*",
 
   /**
    * here you can access all the events fired by dropzone.

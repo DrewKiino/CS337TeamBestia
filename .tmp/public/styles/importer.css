@@ -31,6 +31,10 @@ code {
   .horizontal-section-container .songs {
     margin: auto;
     min-width: 800px; }
+  .horizontal-section-container .dropzone-container {
+    margin-top: 24px;
+    background-color: white;
+    height: 200px; }
 
 .horizontal-section {
   padding: 0 !important;
