@@ -39,6 +39,7 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -56,6 +57,8 @@ code {
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
 =======
+=======
+>>>>>>> installed sass compiler
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -65,11 +68,15 @@ code {
 <<<<<<< HEAD
 >>>>>>> installed sass compiler
 =======
+>>>>>>> installed sass compiler
 =======
 =======
+=======
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
+=======
+>>>>>>> installed sass compiler
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -82,10 +89,13 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
 =======
 >>>>>>> created home page with multiple pages
+=======
+>>>>>>> installed sass compiler
 =======
 >>>>>>> installed sass compiler
 =======
@@ -99,6 +109,7 @@ code {
 >>>>>>> installed sass compiler
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> created home page with multiple pages
 =======
   flex-direction: row; }
@@ -113,6 +124,7 @@ code {
   .horizontal-section-container .apps {
 >>>>>>> converting songs to navy web app
 =======
+<<<<<<< HEAD
 >>>>>>> converting songs to navy web app
 =======
 =======
@@ -136,6 +148,14 @@ code {
 >>>>>>> installed sass compiler
 =======
 >>>>>>> converting songs to navy web app
+=======
+  flex-direction: row; }
+  .horizontal-section-container .menu {
+    min-width: 128px; }
+  .horizontal-section-container .songs {
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
     margin: auto;
     min-width: 800px; }
   .horizontal-section-container .dropzone-container {
@@ -148,14 +168,18 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> converting songs to navy web app
+=======
+>>>>>>> installed sass compiler
     margin-left: 24px;
 =======
 >>>>>>> installed sass compiler
 =======
     margin-left: 24px;
 >>>>>>> converting songs to navy web app
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> installed sass compiler
@@ -174,6 +198,13 @@ code {
 >>>>>>> installed sass compiler
 =======
 >>>>>>> converting songs to navy web app
+=======
+=======
+    margin-left: 24px;
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
     background-color: white;
     height: 200px; }
 
@@ -187,16 +218,23 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
+=======
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
 =======
 >>>>>>> created home page with multiple pages
 =======
 >>>>>>> installed sass compiler
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
@@ -214,6 +252,10 @@ code {
 >>>>>>> installed sass compiler
 =======
 >>>>>>> created home page with multiple pages
+=======
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
   .menu-container .logo {
     margin: auto; }

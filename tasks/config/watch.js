@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> added paper-menu styling
 =======
@@ -42,6 +43,8 @@ module.exports = function(grunt) {
 =======
 >>>>>>> added paper-menu styling
 =======
+>>>>>>> installed sass compiler
+=======
 >>>>>>> added paper-menu styling
 =======
 >>>>>>> installed sass compiler
@@ -49,6 +52,12 @@ module.exports = function(grunt) {
 =======
 >>>>>>> added paper-menu styling
 >>>>>>> added paper-menu styling
+=======
+=======
+>>>>>>> added paper-menu styling
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
 				'assets/**/*',
 				'tasks/pipeline.js',
 =======
@@ -59,6 +68,9 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> installed sass compiler
 =======
 >>>>>>> installed sass compiler
 =======
@@ -76,12 +88,20 @@ module.exports = function(grunt) {
 =======
 >>>>>>> installed sass compiler
 =======
+<<<<<<< HEAD
 >>>>>>> added paper-menu styling
 =======
 >>>>>>> added paper-menu styling
+=======
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
+=======
+>>>>>>> installed sass compiler
 				'assets/**/*',
 				'tasks/pipeline.js',
 >>>>>>> installed sass compiler
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -117,7 +137,16 @@ module.exports = function(grunt) {
 =======
 >>>>>>> added paper-menu styling
 >>>>>>> added paper-menu styling
+<<<<<<< HEAD
 >>>>>>> added paper-menu styling
+=======
+=======
+=======
+>>>>>>> added paper-menu styling
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
@@ -137,10 +166,15 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> installed sass compiler
 =======
 >>>>>>> converting songs to navy web app
+=======
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
       livereload: true
 =======
       livereload: 12345
@@ -151,14 +185,20 @@ module.exports = function(grunt) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> installed sass compiler
 =======
 >>>>>>> converting songs to navy web app
 =======
 >>>>>>> installed sass compiler
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> converting songs to navy web app
 >>>>>>> converting songs to navy web app
+=======
+>>>>>>> installed sass compiler
       livereload: true
 =======
       livereload: 12345
@@ -166,6 +206,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> installed sass compiler
 =======
 =======
@@ -193,12 +234,17 @@ module.exports = function(grunt) {
 >>>>>>> installed sass compiler
 =======
 >>>>>>> converting songs to navy web app
+=======
+>>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
 =======
 =======
       livereload: true
 >>>>>>> converting songs to navy web app
 >>>>>>> converting songs to navy web app
+=======
+>>>>>>> installed sass compiler
+>>>>>>> installed sass compiler
     }
 	});
 

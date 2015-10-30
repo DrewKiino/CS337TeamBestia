@@ -1080,7 +1080,15 @@
   <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
   <link rel="import" href="bower_components/paper-menu/paper-menu.html">
   <link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+<<<<<<< HEAD
   <link rel='stylesheet' href='styles/importer.css'>
+=======
+
+  <link rel='import' href='components/dropzone/dropzone-element.html'>
+
+  <link is='custom-style' rel='stylesheet' href='styles/importer.css'>
+
+>>>>>>> installed sass compiler
 </head>
 <body unresolved>
   <h1>Hello, World!</h1>
@@ -1089,10 +1097,24 @@
       <h4>Standard</h4>
       <div class="horizontal-section">
         <paper-menu>
+<<<<<<< HEAD
           <paper-item>Inbox</paper-item>
           <paper-item>Starred</paper-item>
           <paper-item>Sent mail</paper-item>
           <paper-item>Drafts</paper-item>
+=======
+          <paper-item>Login</paper-item>
+          <paper-item>Browse</paper-item>
+          <paper-submenu>
+              <paper-item class="menu-trigger">Upload</paper-item>
+              <paper-menu class="menu-content sublist">
+                <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data" class='upload-form'>
+                  <input type="file" name="fileField"><br /><br />
+                  <input type="submit" name="submit" value="Submit">
+                </form>
+              </paper-menu>
+            </paper-submenu>       
+>>>>>>> installed sass compiler
         </paper-menu>
       </div>
     </div>
