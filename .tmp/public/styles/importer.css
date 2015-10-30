@@ -26,10 +26,27 @@ code {
 
 .menu-container {
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: #BBDEFB;
+=======
+  flex-direction: row; }
+  .horizontal-section-container .menu {
+    min-width: 128px; }
+  .horizontal-section-container .songs {
+    margin: auto;
+    min-width: 800px; }
+  .horizontal-section-container .dropzone-container {
+    margin-top: 24px;
+    background-color: white;
+    height: 200px; }
+
+.horizontal-section {
+  padding: 0 !important;
+  background-color: white;
+>>>>>>> installed sass compiler
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
   .menu-container .logo {
     margin: auto; }

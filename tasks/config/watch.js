@@ -25,11 +25,16 @@ module.exports = function(grunt) {
 			// Assets to watch:
 			files: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 				'assets/**/*',
 				'tasks/pipeline.js',
 =======
 				'assets/**/*', 'tasks/pipeline.js',
 >>>>>>> added paper-menu styling
+=======
+				'assets/**/*',
+				'tasks/pipeline.js',
+>>>>>>> installed sass compiler
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
@@ -39,7 +44,11 @@ module.exports = function(grunt) {
 			tasks: ['syncAssets' , 'linkAssets']
 		},
 		options: {
+<<<<<<< HEAD
       livereload: true
+=======
+      livereload: 12345
+>>>>>>> installed sass compiler
     }
 	});
 
