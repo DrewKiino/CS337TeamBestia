@@ -37,6 +37,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "address-validator": "^0.1.4",
@@ -92,10 +93,15 @@
 =======
 >>>>>>> migrated to polymer
 =======
+=======
+>>>>>>> installed sass compiler
     "aws-lib": "^0.3.0",
     "bluebird": "^2.10.2",
     "body-parser": "^1.14.1",
     "bower": "^1.6.5",
+<<<<<<< HEAD
+>>>>>>> installed sass compiler
+=======
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
@@ -123,10 +129,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "livereload-js": "^2.2.2",
     "lodash": "^3.10.1",
     "mongoose": "^4.1.12",
 =======
+=======
+>>>>>>> installed sass compiler
 =======
 >>>>>>> installed sass compiler
 =======
@@ -228,11 +237,15 @@
 >>>>>>> installed sass compiler
 =======
 =======
+=======
+>>>>>>> installed sass compiler
 <<<<<<< HEAD
     "livereload-js": "^2.2.2",
     "lodash": "^3.10.1",
     "mongoose": "^4.1.12",
 =======
+=======
+>>>>>>> installed sass compiler
     "is_js": "^0.7.4",
     "keyword-analyzer": "0.0.3",
     "keyword-extractor": "0.0.12",
@@ -241,6 +254,7 @@
     "mongoose": "^4.2.2",
     "mongoose-bird": "0.0.1",
     "nodemon": "^1.7.3",
+<<<<<<< HEAD
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
@@ -396,6 +410,18 @@
     "sails-hook-dotenv": "^0.1.1",
     "sails-mongo": "^0.11.4",
     "skipper-gridfs": "^0.5.3",
+    "superagent": "^1.4.0",
+    "superagent-promise": "^1.0.3"
+>>>>>>> installed sass compiler
+<<<<<<< HEAD
+=======
+=======
+    "rc": "~0.5.0",
+    "sails": "~0.11.2",
+    "sails-disk": "~0.10.0",
+    "sails-hook-babel": "^5.0.1",
+    "sails-hook-dotenv": "^0.1.1",
+    "sails-mongo": "^0.11.4",
     "superagent": "^1.4.0",
     "superagent-promise": "^1.0.3"
 >>>>>>> installed sass compiler
