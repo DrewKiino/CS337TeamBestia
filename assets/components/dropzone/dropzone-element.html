@@ -3,18 +3,12 @@
 
 <dom-module id='dropzone-element'>
 
-  <style>
-    div#myDropzone {
-      max-width: 200;
-      border: 1px dashed black;
-    }
-  </style>
-
   <template>
-    <div>{{response}}</div>
-    <button on-click='processQueue'>Upload</button>
-    <div id='myDropzone'>Drop files here to upload</div>
-    <script src='/elements/dropzone/dropzone-config.js'></script>
+    <div class='dropzone-container' id='myDropzone'>
+      <button on-click='processQueue'>Upload</button>
+      <div>{{response}}</div>
+    </div>
+    <script src='/components/dropzone/dropzone-config.js'></script>
   </template>
 
   <script>

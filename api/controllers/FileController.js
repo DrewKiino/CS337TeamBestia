@@ -18,7 +18,7 @@
  */
 export function upload(req, res) {
 
-  sails.log.info('attempting to upload files to S3')
+  sails.log.info('attempting to upload file to mongodb')
 
   /**
    * get the item count and loop through all the files using

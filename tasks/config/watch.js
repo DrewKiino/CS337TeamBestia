@@ -24,7 +24,8 @@ module.exports = function(grunt) {
 
 			// Assets to watch:
 			files: [
-				'assets/**/*', 'tasks/pipeline.js',
+				'assets/**/*',
+				'tasks/pipeline.js',
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
 			tasks: ['syncAssets' , 'linkAssets']
 		},
 		options: {
-      livereload: true,
+      livereload: 12345
     }
 	});
 
