@@ -29,6 +29,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> added paper-menu styling
 =======
@@ -54,6 +55,10 @@ module.exports = function(grunt) {
 =======
 				'assets/**/*', 'tasks/pipeline.js',
 >>>>>>> added paper-menu styling
+=======
+				'assets/**/*',
+				'tasks/pipeline.js',
+>>>>>>> installed sass compiler
 				// Assets to NOT watch
 				'!node_modules/**/*.*',
 				'!bower_components/**/*.*'
@@ -67,6 +72,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       livereload: true
 =======
       livereload: 12345
@@ -88,6 +94,9 @@ module.exports = function(grunt) {
       livereload: true
 >>>>>>> converting songs to navy web app
 >>>>>>> converting songs to navy web app
+=======
+      livereload: 12345
+>>>>>>> installed sass compiler
     }
 	});
 
