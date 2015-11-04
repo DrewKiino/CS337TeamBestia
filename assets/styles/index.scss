@@ -23,16 +23,17 @@ code {
   flex-direction: row;
 
   .menu {
-    min-width: 128px;
+    min-width: 240px;
   }
 
-  .songs {
+  .apps {
     margin: auto;
     min-width: 800px;
   }
 
   .dropzone-container {
     margin-top: 24px;
+    margin-left: 24px;
     background-color: white;
     height: 200px;
   }

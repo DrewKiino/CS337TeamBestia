@@ -27,12 +27,13 @@ code {
   display: flex;
   flex-direction: row; }
   .horizontal-section-container .menu {
-    min-width: 128px; }
-  .horizontal-section-container .songs {
+    min-width: 240px; }
+  .horizontal-section-container .apps {
     margin: auto;
     min-width: 800px; }
   .horizontal-section-container .dropzone-container {
     margin-top: 24px;
+    margin-left: 24px;
     background-color: white;
     height: 200px; }
 
