@@ -53,6 +53,7 @@ code {
   .horizontal-section-container .menu {
     min-width: 240px; }
   .horizontal-section-container .apps {
+<<<<<<< HEAD
 =======
 =======
   flex-direction: row; }
@@ -65,10 +66,13 @@ code {
     min-width: 240px; }
   .horizontal-section-container .apps {
 >>>>>>> converting songs to navy web app
+=======
+>>>>>>> converting songs to navy web app
     margin: auto;
     min-width: 800px; }
   .horizontal-section-container .dropzone-container {
     margin-top: 24px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +84,9 @@ code {
 >>>>>>> converting songs to navy web app
 =======
 >>>>>>> installed sass compiler
+=======
+    margin-left: 24px;
+>>>>>>> converting songs to navy web app
     background-color: white;
     height: 200px; }
 

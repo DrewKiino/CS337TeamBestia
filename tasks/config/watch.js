@@ -73,6 +73,7 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       livereload: true
 =======
       livereload: 12345
@@ -97,6 +98,9 @@ module.exports = function(grunt) {
 =======
       livereload: 12345
 >>>>>>> installed sass compiler
+=======
+      livereload: true
+>>>>>>> converting songs to navy web app
     }
 	});
 
