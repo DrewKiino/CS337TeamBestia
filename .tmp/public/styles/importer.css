@@ -48,17 +48,26 @@ code {
 =======
   flex-direction: row; }
   .horizontal-section-container .menu {
+<<<<<<< HEAD
     min-width: 128px; }
   .horizontal-section-container .songs {
 >>>>>>> installed sass compiler
+=======
+    min-width: 240px; }
+  .horizontal-section-container .apps {
+>>>>>>> converting songs to navy web app
     margin: auto;
     min-width: 800px; }
   .horizontal-section-container .dropzone-container {
     margin-top: 24px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-left: 24px;
 =======
 >>>>>>> installed sass compiler
+=======
+    margin-left: 24px;
+>>>>>>> converting songs to navy web app
     background-color: white;
     height: 200px; }
 
