@@ -115,8 +115,11 @@ module.exports = function(grunt) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> installed sass compiler
+=======
+>>>>>>> converting songs to navy web app
       livereload: true
 =======
       livereload: 12345
@@ -126,16 +129,22 @@ module.exports = function(grunt) {
 >>>>>>> converting songs to navy web app
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> converting songs to navy web app
 =======
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> converting songs to navy web app
+>>>>>>> converting songs to navy web app
       livereload: true
 =======
       livereload: 12345
 >>>>>>> installed sass compiler
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> installed sass compiler
 =======
 =======
@@ -161,7 +170,14 @@ module.exports = function(grunt) {
 >>>>>>> converting songs to navy web app
 =======
 >>>>>>> installed sass compiler
+=======
+>>>>>>> converting songs to navy web app
 >>>>>>> installed sass compiler
+=======
+=======
+      livereload: true
+>>>>>>> converting songs to navy web app
+>>>>>>> converting songs to navy web app
     }
 	});
 

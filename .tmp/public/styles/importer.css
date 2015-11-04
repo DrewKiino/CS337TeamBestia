@@ -113,11 +113,14 @@ code {
     min-width: 240px; }
   .horizontal-section-container .apps {
 >>>>>>> converting songs to navy web app
+<<<<<<< HEAD
 =======
     min-width: 128px; }
   .horizontal-section-container .songs {
 >>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
+=======
+>>>>>>> converting songs to navy web app
     margin: auto;
     min-width: 800px; }
   .horizontal-section-container .dropzone-container {
@@ -129,7 +132,16 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> converting songs to navy web app
     margin-left: 24px;
+=======
+>>>>>>> installed sass compiler
+=======
+    margin-left: 24px;
+>>>>>>> converting songs to navy web app
+<<<<<<< HEAD
 =======
 >>>>>>> installed sass compiler
 =======
@@ -141,15 +153,12 @@ code {
     margin-left: 24px;
 >>>>>>> converting songs to navy web app
 =======
+    margin-left: 24px;
+=======
+>>>>>>> installed sass compiler
 >>>>>>> installed sass compiler
 =======
-    margin-left: 24px;
 >>>>>>> converting songs to navy web app
-=======
-    margin-left: 24px;
-=======
->>>>>>> installed sass compiler
->>>>>>> installed sass compiler
     background-color: white;
     height: 200px; }
 
