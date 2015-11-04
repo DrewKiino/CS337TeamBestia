@@ -45,6 +45,7 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -55,6 +56,8 @@ code {
 >>>>>>> created home page with multiple pages
 =======
 >>>>>>> created home page with multiple pages
+=======
+>>>>>>> converting songs to navy web app
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: $blue100;
@@ -115,6 +118,13 @@ code {
   }
 
   .menu-item {
+=======
+  .menu {
+    min-width: 240px;
+  }
+
+  .apps {
+>>>>>>> converting songs to navy web app
     margin: auto;
     min-width: 256px;
     background-color: white;
@@ -122,6 +132,7 @@ code {
 
   .dropzone-container {
     margin-top: 24px;
+    margin-left: 24px;
     background-color: white;
     height: 200px;
   }
