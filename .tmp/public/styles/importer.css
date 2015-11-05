@@ -23,36 +23,32 @@ body {
 code {
   color: #616161; }
 
-.horizontal-section-container {
+.menu-container {
   display: flex;
-  flex-direction: row; }
-  .horizontal-section-container .menu {
-    min-width: 240px; }
-  .horizontal-section-container .apps {
+  flex-direction: row;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #BBDEFB;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+  .menu-container .logo {
+    margin: auto; }
+  .menu-container .menu-item {
     margin: auto;
-    min-width: 800px; }
-  .horizontal-section-container .dropzone-container {
-    margin-top: 24px;
-    margin-left: 24px;
-    background-color: white;
-    height: 200px; }
+    min-width: 256px;
+    background-color: white; }
 
-.horizontal-section {
-  padding: 0 !important;
+.body-container {
+  padding-top: 24px;
   background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
-
-.vertical-section {
-  background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
-
-.sublist {
-  padding-left: 20px;
-  padding-right: 20px; }
-
-.centered {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto; }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  min-height: 800px; }
+  .body-container .home-page {
+    text-align: center; }
+  .body-container .apps-page {
+    text-align: center; }
+  .body-container .upload-page {
+    text-align: center; }
+  .body-container .login-page {
+    text-align: center; }
 
 /*# sourceMappingURL=importer.css.map */
