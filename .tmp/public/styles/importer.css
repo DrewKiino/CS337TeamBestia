@@ -36,6 +36,7 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -48,6 +49,10 @@ code {
 >>>>>>> created home page with multiple pages
 =======
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> created home page with multiple pages
+>>>>>>> created home page with multiple pages
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -57,6 +62,9 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> created home page with multiple pages
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -127,6 +135,7 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> created home page with multiple pages
 =======
@@ -139,6 +148,10 @@ code {
 >>>>>>> created home page with multiple pages
 =======
 >>>>>>> installed sass compiler
+=======
+=======
+>>>>>>> created home page with multiple pages
+>>>>>>> created home page with multiple pages
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
   .menu-container .logo {
     margin: auto; }
@@ -156,10 +169,13 @@ code {
     text-align: center; }
   .body-container .apps-page {
     text-align: center; }
+<<<<<<< HEAD
     .body-container .apps-page .app-container {
       background-color: #E3F2FD;
       margin: 24px 24px 24px 24px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+=======
+>>>>>>> created home page with multiple pages
   .body-container .upload-page {
     text-align: center; }
   .body-container .login-page {
@@ -169,6 +185,7 @@ code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> integrated working sass
 =======
@@ -191,12 +208,17 @@ h1 {
 >>>>>>> created home page with multiple pages
 >>>>>>> created home page with multiple pages
 =======
+>>>>>>> created home page with multiple pages
+=======
 h1 {
   color: red; }
 >>>>>>> integrated working sass
 =======
 >>>>>>> created home page with multiple pages
+<<<<<<< HEAD
 =======
 >>>>>>> integrated working sass
+=======
+>>>>>>> created home page with multiple pages
 
 /*# sourceMappingURL=importer.css.map */
