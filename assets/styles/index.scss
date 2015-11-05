@@ -1,9 +1,8 @@
+@import "color.scss";
 
 $shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14),
           0 1px 5px 0 rgba(0, 0, 0, 0.12),
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
-$grey30:  #fafafa;
-$grey700: #616161;
 
 
 body {
@@ -18,48 +17,46 @@ code {
   color: $grey700;
 }
 
-.horizontal-section-container {
+.menu-container {
   display: flex;
   flex-direction: row;
 
-  .menu {
-    min-width: 240px;
-  }
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: $blue100;
+  box-shadow: $shadow;
 
-  .apps {
+  .logo {
     margin: auto;
-    min-width: 800px;
   }
 
-  .dropzone-container {
-    margin-top: 24px;
-    margin-left: 24px;
+  .menu-item {
+    margin: auto;
+    min-width: 256px;
     background-color: white;
-    height: 200px;
   }
 }
 
-.horizontal-section {
-  padding: 0 !important;
+.body-container {
+  padding-top: 24px;
   background-color: white;
   box-shadow: $shadow;
+
+  min-height: 800px;
+
+  .home-page{
+    text-align: center;
+  }
+
+  .apps-page {
+    text-align: center;
+  }
+
+  .upload-page {
+    text-align: center;
+  }
+
+  .login-page {
+    text-align: center;
+  }
 }
-
-.vertical-section {
-  background-color: white;
-  box-shadow: $shadow;
-}
-
-.sublist {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.centered {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
