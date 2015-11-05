@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> created home page with multiple pages
 @import "color.scss";
 
 $shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -23,10 +26,14 @@ code {
   flex-direction: row;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> created home page with multiple pages
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: $blue100;
   box-shadow: $shadow;
+<<<<<<< HEAD
 
   .logo {
     margin: auto;
@@ -43,13 +50,17 @@ code {
     margin: auto;
     min-width: 256px;
     background-color: white;
+=======
+
+  .logo {
+    margin: auto;
+>>>>>>> created home page with multiple pages
   }
 
-  .dropzone-container {
-    margin-top: 24px;
-    margin-left: 24px;
+  .menu-item {
+    margin: auto;
+    min-width: 256px;
     background-color: white;
-    height: 200px;
   }
 }
 
@@ -59,6 +70,7 @@ code {
   box-shadow: $shadow;
 
   min-height: 800px;
+<<<<<<< HEAD
 
   .home-page{
     text-align: center;
@@ -86,6 +98,26 @@ h1 {
 <<<<<<< HEAD
 >>>>>>> integrated working sass
 =======
+=======
 
+  .home-page{
+    text-align: center;
+  }
 
+  .apps-page {
+    text-align: center;
+  }
+>>>>>>> created home page with multiple pages
+
+  .upload-page {
+    text-align: center;
+  }
+
+<<<<<<< HEAD
 >>>>>>> installed sass compiler
+=======
+  .login-page {
+    text-align: center;
+  }
+}
+>>>>>>> created home page with multiple pages

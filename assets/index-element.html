@@ -1,8 +1,13 @@
 <dom-module id='index-element'>
   <link rel='import' href='bower_components/paper-button/paper-button.html'>
+<<<<<<< HEAD
   <link rel='import' href='bower_components/iron-image/iron-image.html'>
   <link rel='import' href='apps-element.html'>
 
+=======
+  <link rel='import' href='bower_components/iron-list/iron-list.html'>
+  <link rel='import' href='bower_components/iron-image/iron-image.html'>
+>>>>>>> created home page with multiple pages
   <template>
     <div class='menu-container'>
       <iron-image class='logo' sizing="contain" style='width:200px; height: 100px;' src="images/navsea-logo.png"></iron-image>
@@ -16,12 +21,16 @@
       </paper-button>
     </div>
       <div class='body-container'>
+<<<<<<< HEAD
 
+=======
+>>>>>>> created home page with multiple pages
         <div class='home-page' hidden$='{{homePageHidden}}'>
 
           Welcome to the offical Naval Sea Systems Command Web App Store! This website is powered by Team Bestia.
 
         </div>
+<<<<<<< HEAD
 
         <div class='apps-page' hidden$='{{appsPageHidden}}'>
           <apps-element></apps-element>
@@ -35,6 +44,17 @@
           login page
         </div>
 
+=======
+        <div class='apps-page' hidden$='{{appsPageHidden}}'>
+          apps page
+        </div>
+        <div class='apps-page' hidden$='{{uploadPageHidden}}'>
+          upload page
+        </div>
+        <div class='apps-page' hidden$='{{loginPageHidden}}'>
+          login page
+        </div>
+>>>>>>> created home page with multiple pages
       </div>
   </template>
   <script>
@@ -47,10 +67,15 @@
       },
       ready: function() {
         hideAllPages(this)
+<<<<<<< HEAD
         // this.homePageHidden = false
         // currentPage = 'home'
         this.appsPageHidden = false
         currentPage = 'apps'
+=======
+        this.homePageHidden = false
+        currentPage = 'home'
+>>>>>>> created home page with multiple pages
       },
       showHomePage: function() {
         console.log('home')
