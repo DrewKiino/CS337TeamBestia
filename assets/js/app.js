@@ -7,3 +7,5 @@ window.LiveReloadOptions = { host: 'localhost' }
 require('livereload-js')
 
 var Promise = require('bluebird')
+
+var is = require('is_js')

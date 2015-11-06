@@ -1,7 +1,8 @@
 <dom-module id='index-element'>
   <link rel='import' href='bower_components/paper-button/paper-button.html'>
-  <link rel='import' href='bower_components/iron-list/iron-list.html'>
   <link rel='import' href='bower_components/iron-image/iron-image.html'>
+  <link rel='import' href='apps-element.html'>
+
   <template>
     <div class='menu-container'>
       <iron-image class='logo' sizing="contain" style='width:200px; height: 100px;' src="images/navsea-logo.png"></iron-image>
@@ -15,20 +16,25 @@
       </paper-button>
     </div>
       <div class='body-container'>
+
         <div class='home-page' hidden$='{{homePageHidden}}'>
 
           Welcome to the offical Naval Sea Systems Command Web App Store! This website is powered by Team Bestia.
 
         </div>
+
         <div class='apps-page' hidden$='{{appsPageHidden}}'>
-          apps page
+          <apps-element></apps-element>
         </div>
+
         <div class='apps-page' hidden$='{{uploadPageHidden}}'>
           upload page
         </div>
+
         <div class='apps-page' hidden$='{{loginPageHidden}}'>
           login page
         </div>
+
       </div>
   </template>
   <script>
@@ -41,8 +47,10 @@
       },
       ready: function() {
         hideAllPages(this)
-        this.homePageHidden = false
-        currentPage = 'home'
+        // this.homePageHidden = false
+        // currentPage = 'home'
+        this.appsPageHidden = false
+        currentPage = 'apps'
       },
       showHomePage: function() {
         console.log('home')

@@ -1,0 +1,31 @@
+
+<dom-module id='apps-element'>
+  <link rel='import' href='bower_components/iron-ajax/iron-ajax.html'>
+  <link rel='import' href='bower_components/iron-list/iron-list.html'>
+
+  <template>
+    <iron-ajax url="/apps/getApps" on-response='items' auto></iron-ajax>
+    <iron-list id="list" items="{{items}}" as="item">
+      <template>
+        {{item}}
+      </template>
+    </iron-list>
+  </template>
+  <script>
+
+    Polymer({
+      is: 'apps-element',
+      properties: {
+        items: {
+          type: Array
+        }
+      },
+
+      hresponse: function(req) {
+        // set the items from the server into
+        // the items
+        this.items = req.detail.response.items
+      },
+    })
+  </script>
+</dom-module>
