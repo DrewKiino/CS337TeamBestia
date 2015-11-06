@@ -134,6 +134,12 @@ code {
 
   .apps-page {
     text-align: center;
+
+    .app-container {
+      background-color: $blue50;
+      margin: 24px 24px 24px 24px;
+      box-shadow: $shadow;
+    }
   }
 
   .upload-page {
