@@ -24,10 +24,9 @@ export function getApps(req, res) {
 
 export function submit(req, res) {
   sails.log('attempting to save submitted app')
-
-  sails.log(req.file('file'))
-  sails.log(req.file('fileInput'))
+  console.log(req.body)
   res.json({})
+  // res.serverError()
 
   // req.file('file').upload({
   //   adapter: require('skipper-gridfs'),
