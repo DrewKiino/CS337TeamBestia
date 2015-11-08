@@ -2,7 +2,7 @@
   <link rel='import' href='bower_components/paper-button/paper-button.html'>
   <link rel='import' href='bower_components/iron-image/iron-image.html'>
   <link rel='import' href='apps-element.html'>
-  <link rel='import' href='upload-element.html'>
+  <link rel='import' href='submit-element.html'>
 
   <template>
     <div class='menu-container'>
@@ -11,7 +11,7 @@
       </paper-button>
       <paper-button raised class="menu-item" on-click='showAppsPage'>Apps
       </paper-button>
-      <paper-button raised class="menu-item" on-click='showUploadPage'>Upload
+      <paper-button raised class="menu-item" on-click='showSubmitPage'>Submit
       </paper-button>
       <paper-button raised class="menu-item" on-click='showLoginPage'>Login
       </paper-button>
@@ -28,8 +28,8 @@
           <apps-element></apps-element>
         </div>
 
-        <div class='apps-page' hidden$='{{uploadPageHidden}}'>
-          <upload-element></upload-element>
+        <div class='apps-page' hidden$='{{submitPageHidden}}'>
+          <submit-element></submit-element>
         </div>
 
         <div class='apps-page' hidden$='{{loginPageHidden}}'>
@@ -52,9 +52,8 @@
         // currentPage = 'home'
         // this.appsPageHidden = false
         // currentPage = 'apps'
-        this.uploadPageHidden = false
-        currentPage = 'upload'
-
+        this.submitPageHidden = false
+        currentPage = 'submit'
       },
       showHomePage: function() {
         console.log('home')
@@ -72,12 +71,12 @@
           currentPage = 'apps'
         }
       },
-      showUploadPage: function() {
-        console.log('upload')
-        if (currentPage != 'upload') {
+      showSubmitPage: function() {
+        console.log('submit')
+        if (currentPage != 'submit') {
           hideAllPages(this)
-          this.uploadPageHidden = !this.uploadPageHidden
-          currentPage = 'upload'
+          this.submitPageHidden = !this.submitPageHidden
+          currentPage = 'submit'
         }
       },
       showLoginPage: function() {
@@ -93,7 +92,7 @@
     function hideAllPages(polymer) {
       polymer.homePageHidden = true
       polymer.appsPageHidden = true
-      polymer.uploadPageHidden = true
+      polymer.submitPageHidden = true
       polymer.loginPageHidden = true
     }
   </script>

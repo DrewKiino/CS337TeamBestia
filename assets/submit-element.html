@@ -1,0 +1,41 @@
+
+
+<dom-module id='submit-element'>
+  <link rel='import' href='bower_components/iron-form/iron-form.html'>
+  <link rel='import' href='bower_components/iron-input/iron-input.html'>
+  <style>
+    .form {
+    }
+    input {
+      width: 256px;
+    }
+    label {
+      display: inline-block;
+      text-align: right;
+      width: 128px;
+      margin-right: 8px;
+    }
+  </style>
+  <template>
+    <h1>Submit an app to the NavSea App Store</h1>
+
+    <form class='form' is="iron-form" id="form" method="post" action="/apps/submit">
+      <p><label>App Name</label><input is='iron-input' name="name" bind-value='{{appName}}' required></p>
+      <p><label>Author</label><input is='iron-input' name="author" bind-value='{{author}}' required></p>
+      <p><label>Price ($)</label><input is='iron-input' type='number' step='0.01' name='price' prevent-invalid-input allowed-pattern='[0-9,.]' bind-value='{{price}}' required></p>
+      <p><label>Description</label><input is='iron-input' name='description' bind-value='{{description}}'></p>
+      <p><label>App File(zip)</label><input is='iron-input' name='file' type='file'></p>
+      <paper-button raised on-click="submit">Submit</paper-button>
+    </form>
+  </template>
+  <script>
+    Polymer({
+      is: 'submit-element',
+      properties: {
+      },
+      submit: function() {
+        document.getElementById('form').submit()
+      }
+    })
+  </script>
+</dom-module>
