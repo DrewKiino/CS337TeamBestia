@@ -27,7 +27,7 @@ code {
   // box style
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: $blue100;
+  background-color: $blue800;
   box-shadow: $shadow;
 
   .logo {
@@ -58,14 +58,37 @@ code {
     text-align: center;
 
     .app-container {
-      background-color: $blue50;
+      background-color: $blue100;
       margin: 24px 24px 24px 24px;
       box-shadow: $shadow;
     }
   }
 
-  .upload-page {
+  .submit-page {
+
     text-align: center;
+
+    .form {
+      margin: 0px 24px 0px 24px;
+      padding: 4px 0px 8px 0px;
+      background-color: $blue100;
+      box-shadow: $shadow;
+    }
+
+    input {
+      width: 256px;
+    }
+
+    label {
+      display: inline-block;
+      text-align: right;
+      width: 128px;
+      margin-right: 8px;
+    }
+
+    #submit-button {
+      background-color: white;
+    }
   }
 
   .login-page {

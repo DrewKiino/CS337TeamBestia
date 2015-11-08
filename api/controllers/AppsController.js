@@ -6,6 +6,7 @@
  */
 
 import mongoose from 'mongoose'
+import Promise from 'bluebird'
 
 export function getApps(req, res) {
 
@@ -24,13 +25,18 @@ export function getApps(req, res) {
 export function submit(req, res) {
   sails.log('attempting to save submitted app')
 
-  req.file('file').upload({
-    adapter: require('skipper-gridfs'),
-    uri: 'mongodb://localhost:27017/sails'
-  }, function(err, files) {
-    sails.log.error(err)
-    sails.log(files)
-  })
+  sails.log(req.file('file'))
+  sails.log(req.file('fileInput'))
+  res.json({})
+
+  // req.file('file').upload({
+  //   adapter: require('skipper-gridfs'),
+  //   uri: 'mongodb://localhost:27017/sails'
+  // }, function(err, files) {
+  //   sails.log.error(err)
+  //   sails.log(files)
+  //   res.json({})
+  // })
 
 
   // const {
