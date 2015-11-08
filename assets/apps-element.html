@@ -14,7 +14,6 @@
     </template>
   </template>
   <script>
-
     Polymer({
       is: 'apps-element',
       properties: {
@@ -26,7 +25,8 @@
       hresponse: function(req) {
         // set the items from the server into
         // the items
-        this.items = req.detail.response.items
+        const results = req.detail.response.items
+        if(is.empty(results) || is.undefined(results)) return
         console.log(this.items)
       },
     })

@@ -2,10 +2,11 @@
   <link rel='import' href='bower_components/paper-button/paper-button.html'>
   <link rel='import' href='bower_components/iron-image/iron-image.html'>
   <link rel='import' href='apps-element.html'>
+  <link rel='import' href='upload-element.html'>
 
   <template>
     <div class='menu-container'>
-      <iron-image class='logo' sizing="contain" style='width:200px; height: 100px;' src="images/navsea-logo.png"></iron-image>
+      <iron-image class='logo' sizing="contain" src="images/navsea-logo.png"></iron-image>
       <paper-button raised class="menu-item" on-click='showHomePage'>Home
       </paper-button>
       <paper-button raised class="menu-item" on-click='showAppsPage'>Apps
@@ -28,7 +29,7 @@
         </div>
 
         <div class='apps-page' hidden$='{{uploadPageHidden}}'>
-          upload page
+          <upload-element></upload-element>
         </div>
 
         <div class='apps-page' hidden$='{{loginPageHidden}}'>
@@ -49,8 +50,11 @@
         hideAllPages(this)
         // this.homePageHidden = false
         // currentPage = 'home'
-        this.appsPageHidden = false
-        currentPage = 'apps'
+        // this.appsPageHidden = false
+        // currentPage = 'apps'
+        this.uploadPageHidden = false
+        currentPage = 'upload'
+
       },
       showHomePage: function() {
         console.log('home')

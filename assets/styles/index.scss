@@ -4,6 +4,8 @@ $shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14),
           0 1px 5px 0 rgba(0, 0, 0, 0.12),
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
 
+$menu-item-margin: auto 8px auto 8px;
+
 
 body {
   font-family: 'Roboto', 'Noto', sans-serif;
@@ -18,21 +20,25 @@ code {
 }
 
 .menu-container {
+  // display style
   display: flex;
   flex-direction: row;
 
+  // box style
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: $blue100;
   box-shadow: $shadow;
 
   .logo {
-    margin: auto;
+    margin: $menu-item-margin;
+    height: 64px;
+    width: 256px;
   }
 
   .menu-item {
-    margin: auto;
-    min-width: 256px;
+    margin: $menu-item-margin;
+    width: 256px;
     background-color: white;
   }
 }
