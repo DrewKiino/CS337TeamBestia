@@ -1,0 +1,35 @@
+
+
+<dom-module id='submit-element'>
+  <link rel='import' href='bower_components/iron-input/iron-input.html'>
+  <template>
+    <h1>Submit an app to the NavSea App Store</h1>
+    <iframe name='iFrame'></iframe>
+    <form class='form' enctype='multipart/form-data' id="form" method="post" action="/apps/submit" target='iFrame'>
+      <p><label>App Name</label><input is='iron-input' name="name" bind-value='{{appName}}' required></p>
+      <p><label>Author</label><input is='iron-input' name="author" bind-value='{{author}}' required></p>
+      <p><label>Price ($)</label><input is='iron-input' type='number' step='0.01' name='price' prevent-invalid-input allowed-pattern='[0-9,.]' bind-value='{{price}}' required></p>
+      <p><label>Description</label><input is='iron-input' name='description' bind-value='{{description}}'></p>
+      <p><label>App File(zip)</label><input is='iron-input' name='file' id='upload' type='file' accept='.zip,image/*' bind-value='{{file}}'></p>
+      <paper-button id='submit-button' raised on-click="submit">Submit</paper-button>
+    </form>  
+  </template>
+  <script>
+    Polymer({
+      is: 'submit-element',
+      properties: {
+      },
+      submit: function() {
+        if (
+          is.empty($('#upload').value) ||
+          is.empty(this.appName) || is.empty(this.author) ||
+          is.empty(this.description) || is.empty (this.price) 
+        ) return 
+        else {
+          const form = $('#form')
+          form.submit()
+        }
+      }
+    })
+  </script>
+</dom-module>

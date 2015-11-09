@@ -1,5 +1,5 @@
 {
-  "name": "playground",
+  "name": "bestia",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -9,6 +9,7 @@
     "bluebird": "^2.10.2",
     "body-parser": "^1.14.1",
     "bower": "^1.6.5",
+    "bson": "^0.4.19",
     "change-case": "^2.3.0",
     "cli-clear": "^1.0.4",
     "dropzone": "^4.2.0",
@@ -37,11 +38,12 @@
     "mongoose-bird": "0.0.1",
     "nodemon": "^1.7.3",
     "rc": "~0.5.0",
-    "sails": "~0.11.2",
+    "sails": "^0.11.2",
     "sails-disk": "~0.10.0",
     "sails-hook-babel": "^5.0.1",
     "sails-hook-dotenv": "^0.1.1",
     "sails-mongo": "^0.11.4",
+    "skipper-gridfs": "^0.5.3",
     "superagent": "^1.4.0",
     "superagent-promise": "^1.0.3"
   },

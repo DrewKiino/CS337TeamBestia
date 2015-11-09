@@ -12,7 +12,7 @@
 // Browserify task work before copying the files in the .tmp folder
 // so the path sould be something like .tmp/public/js/app.js
 // just change assets/ for .tmp/public/ and then the same path as always
-var browserifyMainFile = '.tmp/public/js/imports.js';
+var browserifyMainFile = '.tmp/public/js/app.js';
 
 
 // CSS files to inject in order
@@ -67,5 +67,6 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function(path) {
 module.exports.templateFilesToInject = templateFilesToInject.map(function(path) {
   return 'assets/' + path;
 });
+
 // Browserify main file path
 module.exports.browserifyMainFile = browserifyMainFile;

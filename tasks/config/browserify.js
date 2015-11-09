@@ -12,12 +12,10 @@
  */
 module.exports = function(grunt) {
 
-  var version = grunt.file.readJSON('package.json').version;
-
   grunt.config.set('browserify', {
     js: {
       src : require('../pipeline').browserifyMainFile,
-      dest: '.tmp/public/browserify/imports.js'
+      dest: '.tmp/public/browserify/app.js'
     },
     options: {
     }

@@ -1,0 +1,99 @@
+<dom-module id='index-element'>
+  <link rel='import' href='bower_components/paper-button/paper-button.html'>
+  <link rel='import' href='bower_components/iron-image/iron-image.html'>
+  <link rel='import' href='apps-element.html'>
+  <link rel='import' href='submit-element.html'>
+
+  <template>
+    <div class='menu-container'>
+      <iron-image class='logo' sizing="contain" src="images/navsea-logo.png"></iron-image>
+      <paper-button raised class="menu-item" on-click='showHomePage'>Home
+      </paper-button>
+      <paper-button raised class="menu-item" on-click='showAppsPage'>Apps
+      </paper-button>
+      <paper-button raised class="menu-item" on-click='showSubmitPage'>Submit
+      </paper-button>
+      <paper-button raised class="menu-item" on-click='showLoginPage'>Login
+      </paper-button>
+    </div>
+      <div class='body-container'>
+
+        <div class='home-page' hidden$='{{homePageHidden}}'>
+
+          Welcome to the offical Naval Sea Systems Command Web App Store! This website is powered by Team Bestia.
+
+        </div>
+
+        <div class='apps-page' hidden$='{{appsPageHidden}}'>
+          <apps-element></apps-element>
+        </div>
+
+        <div class='submit-page' hidden$='{{submitPageHidden}}'>
+          <submit-element></submit-element>
+        </div>
+
+        <div class='login-page' hidden$='{{loginPageHidden}}'>
+          login page
+        </div>
+
+      </div>
+  </template>
+  <script>
+
+    var currentPage
+
+    Polymer({
+      is: 'index-element',
+      properties: {
+      },
+      ready: function() {
+        hideAllPages(this)
+        // this.homePageHidden = false
+        // currentPage = 'home'
+        // this.appsPageHidden = false
+        // currentPage = 'apps'
+        this.submitPageHidden = false
+        currentPage = 'submit'
+      },
+      showHomePage: function() {
+        console.log('home')
+        if (currentPage != 'home') {
+          hideAllPages(this)
+          this.homePageHidden = !this.homePageHidden
+          currentPage = 'home'
+        }
+      },
+      showAppsPage: function() {
+        console.log('apps')
+        if (currentPage != 'apps') {
+          hideAllPages(this)
+          this.appsPageHidden = !this.appsPageHidden
+          currentPage = 'apps'
+        }
+      },
+      showSubmitPage: function() {
+        console.log('submit')
+        if (currentPage != 'submit') {
+          hideAllPages(this)
+          this.submitPageHidden = !this.submitPageHidden
+          currentPage = 'submit'
+        }
+      },
+      showLoginPage: function() {
+        console.log('login')
+        if (currentPage != 'login') {
+          hideAllPages(this)
+          this.loginPageHidden = !this.loginPageHidden
+          currentPage = 'login'
+        }
+      },
+    })
+
+    function hideAllPages(polymer) {
+      polymer.homePageHidden = true
+      polymer.appsPageHidden = true
+      polymer.submitPageHidden = true
+      polymer.loginPageHidden = true
+    }
+  </script>
+</dom-module>
