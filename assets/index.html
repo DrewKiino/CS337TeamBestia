@@ -4,17 +4,64 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
   <title>CS337 Team Bestia</title>
-  <!--Scripts-->
-  <script src='browserify/app.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
   <script src='bower_components/webcomponentsjs/webcomponents-lite.js'></script>
-  <!--My polymer elements-->
-  <link rel='import' href='index-element.html'>
-  <!--Syling-->
+
+  <link rel="import" href="bower_components/paper-item/paper-item.html">
+  <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+  <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+  <link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+
+  <link rel='import' href='components/dropzone/dropzone-element.html'>
+
   <link is='custom-style' rel='stylesheet' href='styles/importer.css'>
+
 </head>
 <body unresolved>
-  <index-element></index-element>
-</body>
+  <div class="horizontal-section-container">
+    <div class='menu'>
+      <h4>Bestia Military App Strore</h4>
+      <div class='horizontal-section'>
+        <paper-menu>
+          <paper-item>Login</paper-item>
+          <paper-item>Browse</paper-item>
+          <paper-submenu>
+              <paper-item class="menu-trigger">Upload</paper-item>
+              <paper-menu class="menu-content sublist">
+                <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data" class='upload-form'>
+                  <input type="file" name="fileField"><br /><br />
+                  <input type="submit" name="submit" value="Submit">
+                </form>
+              </paper-menu>
+            </paper-submenu>       
+        </paper-menu>
+      </div>
+    </div>
+
+    <div class='Apps'>
+      <h4>Applications</h4>
+        <div class="horizontal-section">
+          <paper-menu>
+            <paper-submenu opened='0'>
+              <paper-item class="menu-trigger">Recent</paper-item>
+              <paper-menu class="menu-content sublist" selected='0'>
+                <paper-item>Military GPS</paper-item>
+                <paper-item>Recon App</paper-item>
+                <paper-item>Intelligence App</paper-item>
+              </paper-menu>
+            </paper-submenu>
+            <paper-submenu>
+              <paper-item class="menu-trigger">Favorites</paper-item>
+              <paper-menu class="menu-content sublist">
+                <paper-item>Terrorist List</paper-item>
+                <paper-item>Platoon Chat</paper-item>
+              </paper-menu>
+            </paper-submenu>
+          </paper-menu>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

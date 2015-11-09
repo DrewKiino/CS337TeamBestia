@@ -6,7 +6,7 @@
  */
 
 /**
-* MARK: key is not really key but the actual path of the file
+ * MARK: key is not really key but the actual path of the file
  * 
  * EXAMPLE 1: 'stock-photo-2.jpg' was uploaded in a folder called
  * 'image_components', therefore, the key string would be
