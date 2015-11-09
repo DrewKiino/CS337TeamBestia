@@ -23,6 +23,9 @@ body {
 code {
   color: #616161; }
 
+iframe {
+  display: none; }
+
 .menu-container {
   display: flex;
   flex-direction: row;
