@@ -1,9 +1,10 @@
+@import "color.scss";
 
 $shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14),
           0 1px 5px 0 rgba(0, 0, 0, 0.12),
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
-$grey30:  #fafafa;
-$grey700: #616161;
+
+$menu-item-margin: auto 8px auto 8px;
 
 
 body {
@@ -18,47 +19,83 @@ code {
   color: $grey700;
 }
 
-.horizontal-section-container {
+iframe {
+   display:none;
+ }
+
+.menu-container {
+  // display style
   display: flex;
   flex-direction: row;
 
-  .menu {
-    min-width: 128px;
+  // box style
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: $blue800;
+  box-shadow: $shadow;
+
+  .logo {
+    margin: $menu-item-margin;
+    height: 64px;
+    width: 256px;
   }
 
-  .songs {
-    margin: auto;
-    min-width: 800px;
-  }
-
-  .dropzone-container {
-    margin-top: 24px;
+  .menu-item {
+    margin: $menu-item-margin;
+    width: 256px;
     background-color: white;
-    height: 200px;
   }
 }
 
-.horizontal-section {
-  padding: 0 !important;
+.body-container {
+  padding-top: 24px;
   background-color: white;
   box-shadow: $shadow;
+
+  min-height: 800px;
+
+  .home-page{
+    text-align: center;
+  }
+
+  .apps-page {
+    text-align: center;
+
+    .app-container {
+      background-color: $blue100;
+      margin: 24px 24px 24px 24px;
+      box-shadow: $shadow;
+    }
+  }
+
+  .submit-page {
+
+    text-align: center;
+
+    .form {
+      margin: 0px 24px 0px 24px;
+      padding: 4px 0px 8px 0px;
+      background-color: $blue100;
+      box-shadow: $shadow;
+    }
+
+    input {
+      width: 256px;
+    }
+
+    label {
+      display: inline-block;
+      text-align: right;
+      width: 128px;
+      margin-right: 8px;
+    }
+
+    #submit-button {
+      background-color: white;
+    }
+  }
+
+  .login-page {
+    text-align: center;
+  }
 }
-
-.vertical-section {
-  background-color: white;
-  box-shadow: $shadow;
-}
-
-.sublist {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.centered {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
