@@ -13,12 +13,16 @@
       <p><label>Description</label><input is='iron-input' name='description' bind-value='{{description}}'></p>
       <p><label>App File(zip)</label><input is='iron-input' name='file' id='upload' type='file' accept='.zip,image/*' bind-value='{{file}}'></p>
       <paper-button id='submit-button' raised on-click="submit">Submit</paper-button>
-    </form>  
+    </form><p>
+    {{message}}
   </template>
   <script>
     Polymer({
       is: 'submit-element',
       properties: {
+        message: {
+          type: String
+        }
       },
       submit: function() {
         if (
@@ -30,7 +34,17 @@
         else {
           const form = $('#form')
           form.submit()
+          this.message = 'thank you for submitting!'
         }
+      },
+      resetForm: function() {
+        this.appName = ''
+        this.author = ''
+        this.imageLink = ''
+        this.description = ''
+        this.price = ''
+        this.message = ''
+        $('#upload').value = ''
       }
     })
   </script>

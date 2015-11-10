@@ -50,7 +50,8 @@ iframe {
   .body-container .home-page {
     text-align: center; }
   .body-container .apps-page {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 24px; }
     .body-container .apps-page .app-container {
       width: 400px;
       background-color: #BBDEFB;
