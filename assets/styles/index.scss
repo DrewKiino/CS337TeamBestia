@@ -52,7 +52,7 @@ iframe {
   background-color: white;
   box-shadow: $shadow;
 
-  min-height: 800px;
+  min-height: 2000px;
 
   .home-page{
     text-align: center;
@@ -63,7 +63,7 @@ iframe {
     padding-bottom: 24px;
 
     .app-container {
-      width: 400px;
+      width: 600px;
       background-color: $blue100;
       margin: 24px auto 24px auto;
       padding: 24px 0px 24px 0px;
@@ -93,7 +93,8 @@ iframe {
     text-align: center;
 
     .form {
-      margin: 0px 24px 0px 24px;
+      width: 600px;
+      margin: 0px auto 0px auto;
       padding: 4px 0px 8px 0px;
       background-color: $blue100;
       box-shadow: $shadow;
@@ -108,6 +109,7 @@ iframe {
       text-align: right;
       width: 128px;
       margin-right: 8px;
+      margin-left: auto;
     }
 
     #submit-button {

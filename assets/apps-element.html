@@ -7,6 +7,7 @@
   <link rel='import' href='bower_components/paper-card/paper-card.html'>
 
   <template>
+    <h1>Browse the NavApp Store</h1>
     <paper-button id='refresh-button' raised on-click="refresh">Refresh</paper-button>
     <iron-ajax url="/apps/getApps" on-response='hresponse' auto></iron-ajax>
     <template is='dom-repeat' items='{{items}}' as='item'>
