@@ -25,7 +25,7 @@
         </div>
 
         <div class='apps-page' hidden$='{{appsPageHidden}}'>
-          <apps-element></apps-element>
+          <apps-element id='appsPage'></apps-element>
         </div>
 
         <div class='submit-page' hidden$='{{submitPageHidden}}'>
@@ -50,10 +50,10 @@
         hideAllPages(this)
         // this.homePageHidden = false
         // currentPage = 'home'
-        // this.appsPageHidden = false
-        // currentPage = 'apps'
-        this.submitPageHidden = false
-        currentPage = 'submit'
+        this.appsPageHidden = false
+        currentPage = 'apps'
+        // this.submitPageHidden = false
+        // currentPage = 'submit'
       },
       showHomePage: function() {
         console.log('home')
@@ -69,6 +69,7 @@
           hideAllPages(this)
           this.appsPageHidden = !this.appsPageHidden
           currentPage = 'apps'
+          $('#appsPage').get(0).refresh()
         }
       },
       showSubmitPage: function() {

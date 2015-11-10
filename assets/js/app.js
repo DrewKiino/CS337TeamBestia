@@ -10,3 +10,4 @@ window.LiveReloadOptions = { host: 'localhost' }
 require('livereload-js')
 window.Promise = require('bluebird')
 window.is = require('is_js')
+window._ = require('lodash')

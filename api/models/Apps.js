@@ -13,7 +13,7 @@ const schema = new mongoose.Schema({
 
   author: { type: String },
 
-  name: { type: String },
+  name: { type: String, unique: true, sparse: true },
 
   description: { type: String },
 
