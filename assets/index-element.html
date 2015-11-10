@@ -25,11 +25,11 @@
         </div>
 
         <div class='apps-page' hidden$='{{appsPageHidden}}'>
-          <apps-element></apps-element>
+          <apps-element id='appsPage'></apps-element>
         </div>
 
         <div class='submit-page' hidden$='{{submitPageHidden}}'>
-          <submit-element></submit-element>
+          <submit-element id='submitPage'></submit-element>
         </div>
 
         <div class='login-page' hidden$='{{loginPageHidden}}'>
@@ -48,15 +48,14 @@
       },
       ready: function() {
         hideAllPages(this)
-        // this.homePageHidden = false
-        // currentPage = 'home'
+        this.homePageHidden = false
+        currentPage = 'home'
         // this.appsPageHidden = false
         // currentPage = 'apps'
-        this.submitPageHidden = false
-        currentPage = 'submit'
+        // this.submitPageHidden = false
+        // currentPage = 'submit'
       },
       showHomePage: function() {
-        console.log('home')
         if (currentPage != 'home') {
           hideAllPages(this)
           this.homePageHidden = !this.homePageHidden
@@ -64,23 +63,24 @@
         }
       },
       showAppsPage: function() {
-        console.log('apps')
         if (currentPage != 'apps') {
           hideAllPages(this)
           this.appsPageHidden = !this.appsPageHidden
           currentPage = 'apps'
+          const appPage = $('#appsPage').get(0)
+          appPage.refresh()
         }
       },
       showSubmitPage: function() {
-        console.log('submit')
         if (currentPage != 'submit') {
           hideAllPages(this)
           this.submitPageHidden = !this.submitPageHidden
           currentPage = 'submit'
+          const submitPage = $('#submitPage').get(0)
+          submitPage.resetForm()
         }
       },
       showLoginPage: function() {
-        console.log('login')
         if (currentPage != 'login') {
           hideAllPages(this)
           this.loginPageHidden = !this.loginPageHidden

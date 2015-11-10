@@ -29,7 +29,8 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  migrate: 'drop',
+  migrate: 'alter',
+  // migrate: 'drop',
 
   /**
    * A flag to toggle schemaless or schema mode in databases that support

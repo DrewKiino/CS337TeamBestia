@@ -1,15 +1,26 @@
 
 <dom-module id='apps-element'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.fileDownload/1.4.2/jquery.fileDownload.js'></script>
   <link rel='import' href='bower_components/iron-ajax/iron-ajax.html'>
   <link rel='import' href='bower_components/iron-list/iron-list.html'>
+  <link rel='import' href='bower_components/iron-input/iron-input.html'>
+  <link rel='import' href='bower_components/paper-card/paper-card.html'>
 
   <template>
+    <h1>Browse the NavApp Store</h1>
+    <paper-button id='refresh-button' raised on-click="refresh">Refresh</paper-button>
     <iron-ajax url="/apps/getApps" on-response='hresponse' auto></iron-ajax>
     <template is='dom-repeat' items='{{items}}' as='item'>
       <div class='app-container'>
-        <h4>{{item.name}}</h4><p>
-        {{item.author}}<p>
-        {{item.description}}<p>
+        <paper-card class='image' image='{{item.image}}'></paper-card>
+        <h1>{{item.name}}</h1><p>
+        <label>Author:</label><p>
+        <span class='desc'>{{item.author}}</span><p>
+        <label>Description:</label><p>
+        <span class='desc'>{{item.description}}</span><p>
+        <label>Price:</label><p>
+        <span class='desc'>${{item.price}}</span><p>
+        <paper-button id='download-button' on-click='download' params='{{item.downloadUrl}}' raised>Buy</paper-button>
       </div>
     </template>
   </template>
@@ -18,16 +29,28 @@
       is: 'apps-element',
       properties: {
         items: {
-          type: Array
+          type: Array,
         }
       },
       hresponse: function(req) {
         // set the items from the server into
         // the items
-        const results = req.detail.response.items
+        const results = req.detail.response
         if(is.empty(results) || is.undefined(results)) return
-        console.log(this.items)
+        this.items = results
       },
+      refresh: function() {
+        const $this = this
+        $.get('/apps', function(results) {
+          if(is.empty(results) || is.undefined(results)) return
+          $this.items = results
+        })
+      },
+      download: function(event) {
+        const url = event.target.params
+        event.preventDefault()
+        window.location.href = url
+      }
     })
   </script>
 </dom-module>
