@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src='bower_components/webcomponentsjs/webcomponents-lite.js'></script>
+
+		<link rel="import" href="bower_components/paper-item/paper-item.html">
+		<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+		<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+		<link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+ 		<link is='custom-style' rel='stylesheet' href='styles/importer.css'>
+	</head>
+	<body>
+		<h1 style = "background-color: #444444; color: #ffffff">GovApp Store<small style = "color: #cccccc">Register</small></h1><hr />
+	<dom-module id = "register-view">
+		<div class = "container">
+		<template>
+
+				<form method = "post">
+				
+					<div class = "row text-center col-md-offset-3 col-md-6">
+						<p class = "lead" style = "color: #aa0000">{{Error}}</p>
+						
+						<p class = "lead"></p>
+							<input id = "FirstName" id = "FirstName" class = "form-control" placeholder = "First Name" value = "{{firstname}}">
+						</p>
+
+						<p class = "lead">
+							<input id = "LastName" id = "LastName" class = "form-control" placeholder = "Last Name" value = "{{lastname}}">
+						</p>
+
+						<p class = "lead">
+							<input id = "Email" id = "Email" class = "form-control" placeholder = "Email Address Ex: name@mailadd.com" value = "{{email}}">
+						</p>
+
+						<p class = "lead">
+							<input id = "Password" id = "Password" class = "form-control" placeholder = "Password, minimum length is 6">
+						</p>
+
+						<p class = "lead">
+							<input id = "RePassword" id = "RePassword" class = "form-control" placeholder = "Re-enter Password">
+						</p>
+
+						<p class = "text-center">
+							<input id = "submit" class = "btn btn-primary" type = "submit" value = "Submit">
+						</p>
+					</div>
+						
+				</form>
+
+		</template>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<script>
+			var read = "";
+
+			Polymer({
+				is: 'register-view',
+				properties: {
+					firstname: String,
+					lastname: String,
+					email: String,
+					Error: String
+				},
+
+				ready: function(){
+					$(document).ready(function(){
+				 		$('#submit').click(function (){
+
+				 			const Obj = {
+				 				firstname: $('#FirstName').val(),
+				 				lastname: $('#LastName').val(),
+				 				email: $('#Email').val(),
+				 				password: $('#Password').val(),
+				 				repassword: $('#RePassword').val(),
+				 			};
+
+				 			$.post('./registration/signup', Obj)
+				 			.done(function (data){
+				 				console.log(JSON.parse(JSON.stringify(data)));
+				 				var dataRead = JSON.parse(JSON.stringify(data));
+				 				console.log("Success!");
+
+				 				window.location.replace('./login.html');
+				 			}).fail(function (response){
+				 				read = JSON.parse(JSON.stringify(response.responseJSON));
+
+				 				localStorage.setItem("error", read.error);
+				 				localStorage.setItem("firstname", read.firstname);
+				 				localStorage.setItem("lastname", read.lastname);
+				 				localStorage.setItem("email", read.email);
+				 				window.location.reload(true);
+				 			});
+				 		});
+				 	});
+				 	this.Error = localStorage.getItem("error");
+				 	this.firstname = localStorage.getItem("firstname");
+				 	this.lastname = localStorage.getItem("lastname");
+					this.email = localStorage.getItem("email");
+
+					localStorage.setItem("error", "");
+				 	localStorage.setItem("firstname", "");
+				 	localStorage.setItem("lastname", "");
+				 	localStorage.setItem("email", "");
+				}
+			});
+
+		</script>
+	</dom-module>
+	<register-view firstname = "" lastname = "" email = ""></register-view>
+</body>
+</html>
