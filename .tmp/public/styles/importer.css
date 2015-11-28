@@ -31,6 +31,7 @@ iframe {
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-right: 16px;
   background-color: #1565C0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
   .menu-container .logo {
@@ -53,26 +54,32 @@ iframe {
     text-align: center;
     padding-bottom: 24px; }
     .body-container .apps-page .app-container {
-      width: 600px;
+      display: inline-block;
+      width: 300px;
       background-color: #BBDEFB;
       margin: 24px auto 24px auto;
       padding: 24px 0px 24px 0px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+      .body-container .apps-page .app-container .title {
+        font-size: 24px;
+        font-weight: bold; }
       .body-container .apps-page .app-container .image {
         width: 90%;
         height: 90%; }
-      .body-container .apps-page .app-container .desc {
-        font-weight: bold; }
     .body-container .apps-page #download-button {
       background-color: white; }
     .body-container .apps-page #refresh-button {
       text-transform: none; }
   .body-container .submit-page {
     text-align: center; }
+    .body-container .submit-page .image {
+      width: 50%;
+      height: 50%;
+      margin-bottom: 24px; }
     .body-container .submit-page .form {
       width: 600px;
       margin: 0px auto 0px auto;
-      padding: 4px 0px 8px 0px;
+      padding: 16px 8px 16px 8px;
       background-color: #BBDEFB;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
     .body-container .submit-page input {
@@ -85,7 +92,24 @@ iframe {
       margin-left: auto; }
     .body-container .submit-page #submit-button {
       background-color: white; }
+    .body-container .submit-page #file-input {
+      display: inline-block; }
   .body-container .login-page {
     text-align: center; }
+    .body-container .login-page .image {
+      width: 50%;
+      height: 50%; }
+    .body-container .login-page .response-message {
+      height: 48px; }
+    .body-container .login-page #register-button {
+      background: white;
+      font-size: 16px; }
+  .body-container .registration-page {
+    text-align: center; }
+    .body-container .registration-page .image {
+      width: 50%;
+      height: 50%; }
+    .body-container .registration-page .response-message {
+      height: 48px; }
 
 /*# sourceMappingURL=importer.css.map */

@@ -7,20 +7,20 @@
   <link rel='import' href='bower_components/paper-card/paper-card.html'>
 
   <template>
-    <h1>Browse the NavApp Store</h1>
-    <paper-button id='refresh-button' raised on-click="refresh">Refresh</paper-button>
+    <h1 style = "background-color: #444444; color: #ffffff">GovApp Store<small style = "color: #cccccc">Apps</small></h1><hr />
+    <paper-button id='refresh-button' raised on-click="refresh">Refresh</paper-button><p>
     <iron-ajax url="/apps/getApps" on-response='hresponse' auto></iron-ajax>
     <template is='dom-repeat' items='{{items}}' as='item'>
       <div class='app-container'>
         <paper-card class='image' image='{{item.image}}'></paper-card>
-        <h1>{{item.name}}</h1><p>
+        <span class='title'>{{item.name}}</span><p>
         <label>Author:</label><p>
         <span class='desc'>{{item.author}}</span><p>
         <label>Description:</label><p>
         <span class='desc'>{{item.description}}</span><p>
         <label>Price:</label><p>
         <span class='desc'>${{item.price}}</span><p>
-        <paper-button id='download-button' on-click='download' params='{{item.downloadUrl}}' raised>Buy</paper-button>
+        <paper-button id='download-button' on-click='download' params='{{item.downloadUrl}}' raised hidden='{{shouldHideBuyButton}}'>Buy</paper-button>
       </div>
     </template>
   </template>
@@ -30,7 +30,14 @@
       properties: {
         items: {
           type: Array,
+        },
+        shouldHideBuyButton: {
+          type: Boolean,
         }
+      },
+      ready: function() {
+        if (is.undefined(window.user_id)) this.shouldHideBuyButton = true
+        else this.shouldHideBuyButton = false
       },
       hresponse: function(req) {
         // set the items from the server into
@@ -43,7 +50,11 @@
         const $this = this
         $.get('/apps', function(results) {
           if(is.empty(results) || is.undefined(results)) return
-          $this.items = results
+          else {
+            $this.items = _.filter(results, n => {
+              return is.not.empty(n.name)
+            })
+          }
         })
       },
       download: function(event) {

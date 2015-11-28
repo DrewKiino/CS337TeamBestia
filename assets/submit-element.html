@@ -3,26 +3,36 @@
 <dom-module id='submit-element'>
   <link rel='import' href='bower_components/iron-input/iron-input.html'>
   <template>
-    <h1>Submit an app to the NavSea App Store</h1>
+    <div hidden='{{!shouldHideForm}}'>Please login to submit an app!</div>
+    <h1 style = "background-color: #444444; color: #ffffff">GovApp Store<small style = "color: #cccccc">App Submission</small></h1><hr />
+    <paper-card class='image' image='http://www.infowars.com/wp-content/uploads/2015/03/040315jets.jpg'></paper-card>
     <iframe name='iFrame'></iframe>
-    <form class='form' enctype='multipart/form-data' id="form" method="post" action="/apps/submit" target='iFrame'>
+    <form class='form' enctype='multipart/form-data' id="form" method="post" action="/apps/submit" target='iFrame' hidden='{{shouldHideForm}}'>
       <p><label>Author</label><input is='iron-input' name="author" bind-value='{{author}}' required></p>
       <p><label>App Name</label><input is='iron-input' name="name" bind-value='{{appName}}' required></p>
       <p><label>Image Link</label><input is='iron-input' name='imageLink' bind-value='{{imageLink}}'></p>
       <p><label>Price ($)</label><input is='iron-input' type='number' step='0.01' name='price' prevent-invalid-input allowed-pattern='[0-9,.]' bind-value='{{price}}' required></p>
       <p><label>Description</label><input is='iron-input' name='description' bind-value='{{description}}'></p>
-      <p><label>App File(zip)</label><input is='iron-input' name='file' id='upload' type='file' accept='.zip,image/*' bind-value='{{file}}'></p>
+      <p><label>App File(zip)</label><input id='file-input' is='iron-input' name='file' id='upload' type='file' accept='.zip,image/*' bind-value='{{file}}'></p>
       <paper-button id='submit-button' raised on-click="submit">Submit</paper-button>
     </form><p>
     {{message}}
   </template>
-  <script>
+<script>
     Polymer({
       is: 'submit-element',
       properties: {
         message: {
           type: String
+        },
+        shouldHideForm: {
+          type: Boolean,
+          value: false
         }
+      },
+      ready: function() {
+        if (is.undefined(window.user_id)) this.shouldHideForm = true
+        else this.shouldHideForm = false
       },
       submit: function() {
         if (

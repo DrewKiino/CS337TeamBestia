@@ -11,3 +11,10 @@ require('livereload-js')
 window.Promise = require('bluebird')
 window.is = require('is_js')
 window._ = require('lodash')
+
+window.getParam = function getParam(param) {
+  param = param.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + param + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results === null ? undefined : decodeURIComponent(results[1].replace(/\+/g, " "));
+}

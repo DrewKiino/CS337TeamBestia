@@ -1,0 +1,129 @@
+
+
+<dom-module id='login-element'>
+    <link rel='import' href='bower_components/iron-input/iron-input.html'>
+    <link rel='import' href='bower_components/paper-checkbox/paper-checkbox.html'>
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <template>
+    <h1 style = "background-color: #444444; color: #ffffff">GovApp Store <small style = "color: #cccccc">{{LogoutText}}</small></h1>
+    <paper-card class='image' image='http://www.wallpaperup.com/uploads/wallpapers/2013/04/27/79538/d05d71114b77645e1610b8372891d77c.jpg'></paper-card>
+    <div class='response-message'>{{message}}</div>
+    <form class='form' enctype='multipart/form-data' id='login-form' method="post" action="/user/login" hidden='{{!logoutHidden}}'>
+      <div class = "row text-center col-md-offset-3 col-md-6">
+        <p class = "lead" style = "color: #aa0000">{{error}}</p>
+
+        <p class = "lead">
+          Enter your Email:
+          <input is='iron-input' class = "form-control" id="email" type='email' name='email' placeholder='Email' bind-value='{{email}}' required></p>
+        </p>
+        <p class = "lead">
+          Enter your Password:
+          <input is='iron-input' class="form-control" id='password' type='password' name="password" placeholder='Password' bind-value='{{password}}' required></p>
+        </p>
+        <p class = "text-center">
+          Remember me?
+          <paper-checkbox checked='{{rememberMe}}'></paper-checkbox>
+        </p>
+        <p class = "text-center">
+          <input id="submit" class = "btn btn-primary" value = "Login" on-click="submit">
+        </p>
+        <paper-button id='register-button' on-click='showRegistrationPage'>Need to Register?</paper-button>
+      </div>
+    </form>
+    <paper-button id='logout-button' on-click='logoutUser' raised hidden='{{logoutHidden}}'>Logout</paper-button>
+  </template>
+  <script>
+    Polymer({
+      is: 'login-element',
+      properties: {
+        error: {
+          type: String
+        },
+        email: {
+          type: String
+        },
+        password: {
+          type: String
+        },
+        rememberMe: {
+          type: Boolean,
+          // default value
+          value: false
+        },
+        message: {
+          type: String
+        },
+        logoutHidden: {
+          type: Boolean
+        },
+        LogoutText: {
+          type: String,
+          value: this.logoutHidden ? 'Login' : 'Logout'
+        },
+      },
+      ready: function() {
+        window.rememberMe = _.first(_.compact(_.map(document.cookie.split('; '), n => {
+          if (n.indexOf('rememberMe') === 0) return n.split('=')[1]
+          else return undefined
+        })))
+        if (window.rememberMe == true || window.rememberMe == 'true') {
+          this.rememberMe = true
+        } else {
+          this.rememberMe = false
+        }
+
+        const indexPage = $('#index-element').get(0)
+
+        if (indexPage.authButton == 'Login' && is.undefined(window.user_id)) {
+          this.logoutHidden = true
+        } else if (indexPage.authButton == 'Logout' && is.existy(window.user_id)) {
+          this.logoutHidden = false
+        }
+      },
+      submit: function() {
+        if ($('#email')[0].validate() && $('#password')[0].validate()) {
+          const polymer = this
+          const form = $('#login-form')
+          form.ajaxForm({
+            success: function(response) {
+              if (is.undefined(response.text)) {
+                polymer.message = 'Successfully logged in! Welcome ' + response.firstName + ' ' + response.lastName + '!'
+                document.cookie = 'user_id=' + response._id + '; max-age=180000; path=/'
+                window.user_id = response
+
+                const indexPage = $('#index-element').get(0).authButton = 'Logout'
+                polymer.logoutHidden = false
+
+                if (polymer.rememberMe == true) {
+                  document.cookie = 'rememberMe=true; max-age=180000; path=/'
+                } else {
+                  document.cookie = 'rememberMe=false; max-age=1000; path=/'
+                }
+
+                setTimeout( () => {
+                  polymer.message = ''
+                }, 3000)
+              }
+            }
+          }).submit()
+        }
+      },
+      logoutUser: function() {
+        document.cookie = 'user_id=; max-age=1000; path=/'
+        window.user_id = undefined
+        this.logoutHidden = true
+        const indexPage = $('#index-element').get(0).authButton = 'Login'
+      },
+      showRegistrationPage: function() {
+        const indexPage = $('#index-element').get(0)
+        indexPage.showRegistrationPage()
+      }
+    })
+  </script>
+</dom-module>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  	<script src="https://oss.maxcdn.com/jquery.form/3.50/jquery.form.min.js"></script>
+
+    <link rel='import' href='bower_components/iron-input/iron-input.html'>
+		<link rel="import" href="bower_components/paper-item/paper-item.html">
+		<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+		<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+		<link rel="import" href="bower_components/paper-submenu/paper-submenu.html">
+
+ 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1 style = "background-color: #444444; color: #ffffff">GovApp Store<small style = "color: #cccccc">Register</small></h1><hr />
+	<dom-module id = "register-view">
+		<div class = "container">
+		<template>
+		  <form class='form' enctype='multipart/form-data' id='registration-form' method="post" action="/user/signup">
+      <div class = "row text-center col-md-offset-3 col-md-6">
+        <p class = "lead" style = "color: #aa0000">{{error}}</p>
+
+        <p class = "lead">
+          <input is='iron-input' class = "form-control" id="firstName" name='firstName' placeholder='First Name' bind-value='{{firstName}}' required></p>
+        </p>
+
+        <p class = "lead">
+          <input is='iron-input' class = "form-control" id="lastName" name='lastName' placeholder='Last Name' bind-value='{{lastName}}' required></p>
+        </p>
+
+        <p class = "lead">
+          <input is='iron-input' class = "form-control" id="email" type='email' name='email' placeholder='Email' bind-value='{{email}}' required></p>
+        </p>
+
+        <p class = "lead">
+          <input is='iron-input' class="form-control" id='password' type='password' name="password" placeholder='Password' bind-value='{{password}}' required></p>
+        </p>
+
+        <p class = "lead">
+          <input is='iron-input' class="form-control" id='re-password' type='password' name="repassword" placeholder='Re-enter Password' bind-value='{{repassword}}' required></p>
+        </p>
+
+        <p class = "text-center">
+          <input id="submit" class = "btn btn-primary" value = "Login" on-click="submit">
+        </p>
+
+        <a href = "./index.html?page=login">Need to Login?</a>
+      </div>
+    	</form>
+		</template>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<script>
+			var read = "";
+
+			Polymer({
+				is: 'register-view',
+				properties: {
+					firstName: String,
+					lastName: String,
+					email: String,
+					password: String,
+					repassword: String
+				},
+				submit: function() {
+	        if (
+	        	$('#firstName')[0].validate() && 
+	        	$('#lastName')[0].validate() && 
+	        	$('#email')[0].validate() && 
+	        	$('#password')[0].validate() && $('#password')[0].validate() &&
+	        	this.password == this.repassword
+        	) {
+	          const polymer = this
+	          const form = $('#registration-form')
+	          form.ajaxForm({
+	            success: function(response) {
+	              polymer.message = response.text
+	            }
+	          }).submit()
+	        }
+	      },
+			})
+
+		</script>
+	</dom-module>
+	<register-view></register-view>
+</body>
+</html>

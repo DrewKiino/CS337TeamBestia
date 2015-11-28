@@ -1,8 +1,11 @@
 <dom-module id='index-element'>
   <link rel='import' href='bower_components/paper-button/paper-button.html'>
   <link rel='import' href='bower_components/iron-image/iron-image.html'>
+  <link rel='import' href='home-element.html'>
   <link rel='import' href='apps-element.html'>
   <link rel='import' href='submit-element.html'>
+  <link rel='import' href='login-element.html'>
+  <link rel='import' href='registration-element.html'>
 
   <template>
     <div class='menu-container'>
@@ -13,15 +16,13 @@
       </paper-button>
       <paper-button raised class="menu-item" on-click='showSubmitPage'>Submit
       </paper-button>
-      <paper-button raised class="menu-item" on-click='showLoginPage'>Login
+      <paper-button raised class="menu-item" on-click='showLoginPage'>{{authButton}}
       </paper-button>
     </div>
       <div class='body-container'>
 
         <div class='home-page' hidden$='{{homePageHidden}}'>
-
-          Welcome to the offical Naval Sea Systems Command Web App Store! This website is powered by Team Bestia.
-
+          <home-element id='homePage'></home-element>
         </div>
 
         <div class='apps-page' hidden$='{{appsPageHidden}}'>
@@ -33,7 +34,11 @@
         </div>
 
         <div class='login-page' hidden$='{{loginPageHidden}}'>
-          login page
+          <login-element id='loginPage'></login-element>
+        </div>
+
+        <div class='registration-page' hidden$='{{registrationPageHidden}}'>
+          <registration-element id='registrationPage'></registration-element>
         </div>
 
       </div>
@@ -42,24 +47,46 @@
 
     var currentPage
 
-    Polymer({
+    const polymer = Polymer({
       is: 'index-element',
       properties: {
+        authButton: {
+          type: String,
+          value: 'Login'
+        }
       },
       ready: function() {
+
+        // show relevant pages
         hideAllPages(this)
-        this.homePageHidden = false
-        currentPage = 'home'
-        // this.appsPageHidden = false
-        // currentPage = 'apps'
-        // this.submitPageHidden = false
-        // currentPage = 'submit'
+        const user = getParam('user')
+        const page = getParam('page')
+        switch (page) {
+          case 'apps': 
+            this.appsPageHidden = false
+            currentPage = 'apps'
+            break
+          case 'registration': 
+            this.registrationPageHidden = false
+            currentPage = 'registration'
+            break
+          case 'login': 
+            this.loginPageHidden = false
+            currentPage = 'login'
+            break
+          default: 
+            this.homePageHidden = false
+            currentPage = 'home'
+            break
+        }
       },
       showHomePage: function() {
         if (currentPage != 'home') {
           hideAllPages(this)
           this.homePageHidden = !this.homePageHidden
           currentPage = 'home'
+          const homePage = $('#homePage').get(0)
+          homePage.ready()
         }
       },
       showAppsPage: function() {
@@ -68,6 +95,7 @@
           this.appsPageHidden = !this.appsPageHidden
           currentPage = 'apps'
           const appPage = $('#appsPage').get(0)
+          appsPage.ready()
           appPage.refresh()
         }
       },
@@ -77,6 +105,7 @@
           this.submitPageHidden = !this.submitPageHidden
           currentPage = 'submit'
           const submitPage = $('#submitPage').get(0)
+          submitPage.ready()
           submitPage.resetForm()
         }
       },
@@ -85,6 +114,15 @@
           hideAllPages(this)
           this.loginPageHidden = !this.loginPageHidden
           currentPage = 'login'
+          const loginPage = $('#loginPage').get(0)
+          loginPage.ready()
+        }
+      },
+      showRegistrationPage: function() {
+        if (currentPage != 'registration') {
+          hideAllPages(this)
+          this.registrationPageHidden = !this.registrationPageHidden
+          currentPage = 'registration'
         }
       },
     })
@@ -94,6 +132,7 @@
       polymer.appsPageHidden = true
       polymer.submitPageHidden = true
       polymer.loginPageHidden = true
+      polymer.registrationPageHidden = true
     }
   </script>
 </dom-module>

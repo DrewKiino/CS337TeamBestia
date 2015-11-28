@@ -1,0 +1,108 @@
+
+
+
+<dom-module id='home-element'>
+  <template>
+    <div class="jumbotronNumerical">
+      <container>
+          <h1>Gov App Store</h1>
+        <p><h2>Looking for Apps on how to stay Alive?<br /> Want to connect with other government employees?<br />Augment your life one step at a time with innovative, tactical and "government-only" accessible applications.</h2></p>
+      </container>
+</div>
+  <div class="well">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Team Bestia's Mission</h2>
+            <p>
+                Bestia's mission is to provide a series of applications in which the Navy can easily access through a Government-Employee Access only AppStore. The series of applications will consist of numerous of unheard of tools applicable to real world combat, social networking with off-duty chat rooms, and accessibility to suffrage.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>What is GovApp</h2>
+            <p>NAVSEA GovApp Store is a website dedicated to delivering military-developed applications designed for the Navy. With the rapid evolution of computer machinery, GovApp utilizes cloud-based technology that allows for flexible and dynamic updates that meets the demands of time.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Are You Lost?</h2>
+            <p>You can easily find a map that offers your current location, in case your map gets wet, you become a kidnaping victim, you become stranded or are abducted.</p>
+            <p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12" >
+        <div id="mapholder"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'home-element',
+      ready: function() {
+        getLocation()
+        // document.cookie = 'user_id=1234; max-age=180000; path=/'
+        // get the user id from cookies
+        window.user_id = _.first(_.compact(_.map(document.cookie.split('; '), n => {
+          if (n.indexOf('user_id') === 0) return n.split('=')[1]
+          else return undefined
+        })))
+
+        console.log(window.user_id)
+
+        const indexPage = $('#index-element').get(0)
+
+        if (is.undefined(window.user_id)) {
+          indexPage.authButton = 'Login'
+        } else {
+          indexPage.authButton = 'Logout'
+        }
+      },
+    })
+    const x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
+        latlon = new google.maps.LatLng(lat, lon)
+        mapholder = document.getElementById('mapholder')
+        mapholder.style.height = '400px';
+        mapholder.style.width = 'auto';
+
+        var myOptions = {
+        center:latlon,zoom:14,
+        mapTypeId:google.maps.MapTypeId.ROADMAP,
+        mapTypeControl:false,
+        navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+        }
+      
+        const map = new google.maps.Map(document.getElementById("mapholder"), myOptions)
+        const marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"})
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+  </script>
+</dom-module>

@@ -31,6 +31,7 @@ iframe {
   // box style
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-right: 16px;
   background-color: $blue800;
   box-shadow: $shadow;
 
@@ -63,11 +64,18 @@ iframe {
     padding-bottom: 24px;
 
     .app-container {
-      width: 600px;
+
+      display: inline-block;
+      width: 300px;
       background-color: $blue100;
       margin: 24px auto 24px auto;
       padding: 24px 0px 24px 0px;
       box-shadow: $shadow;
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+      }
 
       .image {
         width: 90%;
@@ -75,7 +83,7 @@ iframe {
       }
 
       .desc {
-        font-weight: bold;
+        // font-weight: bold;
       }
     }
 
@@ -92,10 +100,16 @@ iframe {
 
     text-align: center;
 
+    .image {
+      width: 50%;
+      height: 50%;
+      margin-bottom: 24px;
+    }
+
     .form {
       width: 600px;
       margin: 0px auto 0px auto;
-      padding: 4px 0px 8px 0px;
+      padding: 16px 8px 16px 8px;
       background-color: $blue100;
       box-shadow: $shadow;
     }
@@ -115,9 +129,41 @@ iframe {
     #submit-button {
       background-color: white;
     }
+
+    #file-input {
+      display: inline-block
+    }
   }
 
   .login-page {
     text-align: center;
+
+    .image {
+      width: 50%;
+      height: 50%;
+    }
+
+    .response-message {
+      height: 48px;
+    }
+
+    #register-button {
+      background: white;
+      font-size: 16px;
+    }
+  }
+
+  .registration-page {
+
+    text-align: center;
+
+    .image {
+      width: 50%;
+      height: 50%;
+    }
+
+    .response-message {
+      height: 48px;
+    }
   }
 }
