@@ -53,6 +53,11 @@ iframe {
   .body-container .apps-page {
     text-align: center;
     padding-bottom: 24px; }
+    .body-container .apps-page .search-bar {
+      display: inline-block;
+      margin: 0px auto 0px auto;
+      width: 50%;
+      text-align: left; }
     .body-container .apps-page .app-container {
       display: inline-block;
       width: 300px;
@@ -66,6 +71,8 @@ iframe {
       .body-container .apps-page .app-container .image {
         width: 90%;
         height: 90%; }
+    .body-container .apps-page #search-icon {
+      display: inline-block; }
     .body-container .apps-page #download-button {
       background-color: white; }
     .body-container .apps-page #refresh-button {

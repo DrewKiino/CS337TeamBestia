@@ -4,9 +4,18 @@
   <link rel='import' href='bower_components/iron-ajax/iron-ajax.html'>
   <link rel='import' href='bower_components/iron-list/iron-list.html'>
   <link rel='import' href='bower_components/iron-input/iron-input.html'>
+  <link rel='import' href='bower_components/iron-icon/iron-icon.html'>
   <link rel='import' href='bower_components/paper-card/paper-card.html'>
+  <link rel='import' href='bower_components/paper-input/paper-input.html'>
 
   <template>
+    <iron-icon id='search-icon' src='https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/search.png'></iron-icon>
+    <paper-input 
+      class="search-bar" 
+      label="Search" 
+      on-input='search' 
+      value='{{searchInput}}'
+    ></paper-input>
     <h1 style = "background-color: #444444; color: #ffffff">GovApp Store<small style = "color: #cccccc">Apps</small></h1><hr />
     <paper-button id='refresh-button' raised on-click="refresh">Refresh</paper-button><p>
     <iron-ajax url="/apps/getApps" on-response='hresponse' auto></iron-ajax>
@@ -28,16 +37,32 @@
     Polymer({
       is: 'apps-element',
       properties: {
+        _items: {
+          type: Array
+        },
         items: {
           type: Array,
         },
         shouldHideBuyButton: {
           type: Boolean,
+        },
+        searchInput: {
+          type: String
         }
       },
       ready: function() {
         if (is.undefined(window.user_id)) this.shouldHideBuyButton = true
         else this.shouldHideBuyButton = false
+      },
+      search: function(event) {
+        this.items = _.filter(this._items, n => {
+          const input = this.searchInput
+          const name = n.name.toLowerCase()
+          const author = n.author.toLowerCase()
+          const description = n.description.toLowerCase()
+          const price = n.price
+          return _.includes(name, input) || _.includes(author, input) || _.includes(description, input)  || _.includes(price, input)
+        })
       },
       hresponse: function(req) {
         // set the items from the server into
@@ -51,9 +76,12 @@
         $.get('/apps', function(results) {
           if(is.empty(results) || is.undefined(results)) return
           else {
-            $this.items = _.filter(results, n => {
+            const items = _.filter(results, n => {
               return is.not.empty(n.name)
             })
+
+            $this._items = items
+            $this.items = items
           }
         })
       },

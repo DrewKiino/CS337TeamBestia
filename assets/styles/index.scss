@@ -63,6 +63,13 @@ iframe {
     text-align: center;
     padding-bottom: 24px;
 
+    .search-bar {
+      display: inline-block;
+      margin: 0px auto 0px auto;
+      width: 50%;
+      text-align: left;
+    }
+
     .app-container {
 
       display: inline-block;
@@ -85,6 +92,10 @@ iframe {
       .desc {
         // font-weight: bold;
       }
+    }
+
+    #search-icon {
+      display: inline-block;
     }
 
     #download-button {
