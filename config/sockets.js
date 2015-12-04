@@ -49,6 +49,8 @@ module.exports.sockets = {
   // port: 6379,
   // db: 'sails',
   // pass: '<redis auth password>',
+  adapter: 'socket.io-redis',
+  url: process.env.REDISTOGO_URL,
 
 
 

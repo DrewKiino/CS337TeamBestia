@@ -56,10 +56,18 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
+  // mongo: {
+  //   adapter: 'sails-mongo',
+  //   url: 'mongodb://localhost:27017/database'
+  // },
   mongo: {
     adapter: 'sails-mongo',
-    url: 'mongodb://localhost:27017/database'
+    url: process.env.MONGOLAB_URI || 'mongodb://localhost:27017/database'
+    // outsourcing the mongodb means that you cannot alter or drop the database
+    // locally
+    // url: process.env.MONGOLAB_URI 
   },
+
 
   /***************************************************************************
   *                                                                          *
